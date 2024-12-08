@@ -7,7 +7,7 @@ package it.unisa.diem.softeng.modello;
 
 /**
  *
- * @author mashalem
+ * @author christiandamico
  */
 public class Contatto {
     
