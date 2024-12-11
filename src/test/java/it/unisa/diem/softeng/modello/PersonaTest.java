@@ -72,4 +72,14 @@ public class PersonaTest {
         assertEquals("", p1.getNome());
         assertEquals("", p1.getCognome());
     }
+    
+    /**
+     * Test del metodo equals per oggetti uguali.
+     */
+    @Test
+    public void testEqualsOggettiUguali() {
+        Persona p1 = new Persona("Mario", "Rossi");
+        Persona p2 = new Persona("Mario", "Rossi");
+        assertTrue(p1.equals(p2));
+    }
 }
