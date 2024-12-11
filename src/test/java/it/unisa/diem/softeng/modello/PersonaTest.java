@@ -92,4 +92,15 @@ public class PersonaTest {
         Persona p2 = new Persona("Luigi", "Verdi");
         assertFalse(p1.equals(p2));
     }
+    
+     /**
+     * Test del metodo compareTo per oggetti uguali.
+     */
+    @Test
+    public void testCompareToOggettiUguali() {
+        Persona p1 = new Persona("Mario", "Rossi");
+        Persona p2 = new Persona("Mario", "Rossi");
+        assertEquals(0, p1.compareTo(p2));
+    }
+
 }
