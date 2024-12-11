@@ -132,5 +132,15 @@ public class PersonaTest {
         assertEquals("M", p1.getNome());
         assertEquals("Rossi", p1.getCognome());
     }
+    
+    /**
+     * Test per nome normale e cognome di un carattere.
+     */
+    @Test
+    public void testBoundaryNomeNormaleCognomeUnCarattere() {
+        Persona p1 = new Persona("Mario", "R");
+        assertEquals("Mario", p1.getNome());
+        assertEquals("R", p1.getCognome());
+    }
 
 }
