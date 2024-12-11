@@ -102,5 +102,15 @@ public class PersonaTest {
         Persona p2 = new Persona("Mario", "Rossi");
         assertEquals(0, p1.compareTo(p2));
     }
+    
+    /**
+     * Test del metodo compareTo per ordine alfabetico del cognome.
+     */
+    @Test
+    public void testCompareToPerCognome() {
+        Persona p1 = new Persona("Mario", "Rossi");
+        Persona p2 = new Persona("Luigi", "Verdi");
+        assertTrue(p1.compareTo(p2) < 0);
+    }
 
 }
