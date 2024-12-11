@@ -55,4 +55,11 @@ public class PersonaTest {
         assertThrows(IllegalArgumentException.class, () -> new Persona("Mario", null));
     }
     
+    /**
+     * Test per entrambi null.
+     */
+    @Test
+    public void testCreazioneOggettoConEntrambiNull() {
+        assertThrows(IllegalArgumentException.class, () -> new Persona(null, null));
+    }
 }
