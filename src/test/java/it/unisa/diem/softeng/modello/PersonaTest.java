@@ -44,4 +44,12 @@ public class PersonaTest {
         assertEquals("", p1.getCognome());
     }
     
+    /**
+     * Test per nome null.
+     */
+    @Test
+    public void testCreazioneOggettoConNomeNull() {
+        assertThrows(IllegalArgumentException.class, () -> new Persona(null, "Rossi"));
+    }
+    
 }
