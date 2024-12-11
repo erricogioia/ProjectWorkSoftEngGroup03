@@ -82,4 +82,14 @@ public class PersonaTest {
         Persona p2 = new Persona("Mario", "Rossi");
         assertTrue(p1.equals(p2));
     }
+    
+    /**
+     * Test del metodo equals per oggetti diversi.
+     */
+    @Test
+    public void testEqualsOggettiDiversi() {
+        Persona p1 = new Persona("Mario", "Rossi");
+        Persona p2 = new Persona("Luigi", "Verdi");
+        assertFalse(p1.equals(p2));
+    }
 }
