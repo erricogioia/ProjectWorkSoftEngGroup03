@@ -158,5 +158,21 @@ public class PersonaTest {
         assertEquals(longName, p1.getNome());
         assertEquals("Rossi", p1.getCognome());
     }
+    
+    /**
+     * Test per nome normale e cognome lungo.
+     */
+    @Test
+    public void testBoundaryNomeNormaleCognomeLungo() {
+        StringBuilder sb = new StringBuilder();
+        
+        for (int i = 0; i < 1000; i++) 
+            sb.append("B");
+        
+        String longSurname = sb.toString();
+        Persona p1 = new Persona("Mario", longSurname);
+        assertEquals("Mario", p1.getNome());
+        assertEquals(longSurname, p1.getCognome());
+    }
 
 }
