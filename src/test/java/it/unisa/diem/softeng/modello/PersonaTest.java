@@ -112,5 +112,15 @@ public class PersonaTest {
         Persona p2 = new Persona("Luigi", "Verdi");
         assertTrue(p1.compareTo(p2) < 0);
     }
+    
+     /**
+     * Test del metodo compareTo per ordine alfabetico del nome.
+     */
+    @Test
+    public void testCompareToPerNome() {
+        Persona p1 = new Persona("Mario", "Rossi");
+        Persona p2 = new Persona("Anna", "Rossi");
+        assertTrue(p2.compareTo(p1) < 0);
+    }
 
 }
