@@ -14,77 +14,14 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class PersonaTest {
     
-    public PersonaTest() {
-    }
-
+    /**
+     * Test per nome e cognome non vuoti.
+     */
     @Test
-    public void testGetNome() {
-        System.out.println("getNome");
-        Persona instance = null;
-        String expResult = "";
-        String result = instance.getNome();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-    }
-
-    @Test
-    public void testGetCognome() {
-        System.out.println("getCognome");
-        Persona instance = null;
-        String expResult = "";
-        String result = instance.getCognome();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-    }
-
-    @Test
-    public void testSetNome() {
-        System.out.println("setNome");
-        String nome = "";
-        Persona instance = null;
-        instance.setNome(nome);
-        fail("The test case is a prototype.");
-    }
-
-    @Test
-    public void testSetCognome() {
-        System.out.println("setCognome");
-        String cognome = "";
-        Persona instance = null;
-        instance.setCognome(cognome);
-        fail("The test case is a prototype.");
-    }
-
-    @Test
-    public void testEquals() {
-        System.out.println("equals");
-        Object obj = null;
-        Persona instance = null;
-        boolean expResult = false;
-        boolean result = instance.equals(obj);
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-    }
-
-    @Test
-    public void testCompareTo() {
-        System.out.println("compareTo");
-        Persona other = null;
-        Persona instance = null;
-        int expResult = 0;
-        int result = instance.compareTo(other);
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-    }
-
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        Persona instance = null;
-        String expResult = "";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
+    public void testCreazioneOggettoConNomeECognome() {
+        Persona p1 = new Persona("Mario", "Rossi");
+        assertEquals("Mario", p1.getNome());
+        assertEquals("Rossi", p1.getCognome());
     }
     
 }
