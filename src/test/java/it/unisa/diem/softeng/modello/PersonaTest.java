@@ -62,4 +62,14 @@ public class PersonaTest {
     public void testCreazioneOggettoConEntrambiNull() {
         assertThrows(IllegalArgumentException.class, () -> new Persona(null, null));
     }
+    
+    /**
+     * Test per entrambi vuoti.
+     */
+    @Test
+    public void testCreazioneOggettoConEntrambiVuoti() {
+        Persona p1 = new Persona("", "");
+        assertEquals("", p1.getNome());
+        assertEquals("", p1.getCognome());
+    }
 }
