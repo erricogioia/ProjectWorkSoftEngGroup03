@@ -34,4 +34,14 @@ public class PersonaTest {
         assertEquals("Rossi", p1.getCognome());
     }
     
+    /**
+     * Test per cognome vuoto. BoundaryTest2.
+     */
+    @Test
+    public void testCreazioneOggettoConCognomeVuoto() {
+        Persona p1 = new Persona("Mario", "");
+        assertEquals("Mario", p1.getNome());
+        assertEquals("", p1.getCognome());
+    }
+    
 }
