@@ -87,4 +87,17 @@ public class ContattoTest {
         assertNotEquals(c1, c2);
     }
     
+    /**
+     * Test dei limiti per numeri di telefono.
+     */
+    @Test
+    void testBoundaryNumeriTelefono() {
+        StringBuilder lungoTelefono = new StringBuilder();
+        for (int i = 0; i < 1000; i++) 
+            lungoTelefono.append("1");
+
+        Contatto c1 = new Contatto("Mario", "Rossi", lungoTelefono.toString(), "456", "789", "a@example.com", "b@example.com", "c@example.com");
+        assertTrue(c1.getNumeriTelefono().contains(lungoTelefono.toString()));
+    }
+    
 }
