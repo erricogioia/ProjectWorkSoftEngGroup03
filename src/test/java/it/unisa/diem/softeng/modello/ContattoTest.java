@@ -46,4 +46,16 @@ public class ContattoTest {
         assertEquals(Arrays.asList("", "b@example.com", ""), c1.getEmail());
     }
     
+    /**
+     * Test del metodo di creazione con stringhe vuote come input.
+     */
+    @Test
+    void testCreazioneConStringheVuote() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "", "", "", "", "", "");
+        assertEquals("Mario", c1.getNome());
+        assertEquals("Rossi", c1.getCognome());
+        assertEquals(Arrays.asList("", "", ""), c1.getNumeriTelefono());
+        assertEquals(Arrays.asList("", "", ""), c1.getEmail());
+    }
+    
 }
