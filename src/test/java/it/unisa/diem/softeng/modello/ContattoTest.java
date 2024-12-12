@@ -34,4 +34,16 @@ public class ContattoTest {
         assertEquals(Arrays.asList("a@example.com", "", "c@example.com"), c1.getEmail());
     }
     
+    /**
+     * Test del metodo di creazione con input validi.
+     */
+    @Test
+    void testCreazioneValida3() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "", "", "789", "", "b@example.com", "");
+        assertEquals("Mario", c1.getNome());
+        assertEquals("Rossi", c1.getCognome());
+        assertEquals(Arrays.asList("", "", "789"), c1.getNumeriTelefono());
+        assertEquals(Arrays.asList("", "b@example.com", ""), c1.getEmail());
+    }
+    
 }
