@@ -67,7 +67,7 @@ public class ContattoTest {
         assertThrows(IllegalArgumentException.class, () -> { new Contatto("Mario", "Rossi", "123", "456", "789", "a@example.com", null, "c@example.com"); });
     }
     
-       /**
+     /**
      * Test del metodo equals per oggetti uguali.
      */
     @Test
@@ -75,6 +75,16 @@ public class ContattoTest {
         Contatto c1 = new Contatto("Mario", "Rossi", "123", "456", "789", "a@example.com", "b@example.com", "c@example.com");
         Contatto c2 = new Contatto("Mario", "Rossi", "123", "456", "789", "a@example.com", "b@example.com", "c@example.com");
         assertEquals(c1, c2);
+    }
+    
+    /**
+     * Test del metodo equals per oggetti diversi.
+     */
+    @Test
+    void testEqualsOggettiDiversi() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "123", "456", "789", "a@example.com", "b@example.com", "c@example.com");
+        Contatto c2 = new Contatto("Luigi", "Bianchi", "321", "654", "987", "x@example.com", "y@example.com", "z@example.com");
+        assertNotEquals(c1, c2);
     }
     
 }
