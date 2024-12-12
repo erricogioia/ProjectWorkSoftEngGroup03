@@ -67,7 +67,7 @@ public class ContattoTest {
         assertThrows(IllegalArgumentException.class, () -> { new Contatto("Mario", "Rossi", "123", "456", "789", "a@example.com", null, "c@example.com"); });
     }
     
-     /**
+    /**
      * Test del metodo equals per oggetti uguali.
      */
     @Test
@@ -98,6 +98,21 @@ public class ContattoTest {
 
         Contatto c1 = new Contatto("Mario", "Rossi", lungoTelefono.toString(), "456", "789", "a@example.com", "b@example.com", "c@example.com");
         assertTrue(c1.getNumeriTelefono().contains(lungoTelefono.toString()));
+    }
+    
+    /**
+     * Test dei limiti per email.
+     */
+    @Test
+    void testBoundaryEmail() {
+        StringBuilder lungaEmail = new StringBuilder();
+        for (int i = 0; i < 1000; i++) 
+            lungaEmail.append("a");
+        
+        lungaEmail.append("@example.com");
+
+        Contatto c1 = new Contatto("Mario", "Rossi", "123", "456", "789", lungaEmail.toString(), "b@example.com", "c@example.com");
+        assertTrue(c1.getEmail().contains(lungaEmail.toString()));
     }
     
 }
