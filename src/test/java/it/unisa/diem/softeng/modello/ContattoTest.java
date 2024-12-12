@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.unisa.diem.softeng.modello;
 
-import java.util.List;
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.util.Arrays;
+import org.junit.jupiter.api.Test;
 
 /**
  *
@@ -15,37 +10,16 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ContattoTest {
     
-    public ContattoTest() {
-    }
-
+    /**
+     * Test del metodo di creazione con input validi.
+     */
     @Test
-    public void testGetNumeriTelefono() {
-        System.out.println("getNumeriTelefono");
-        Contatto instance = null;
-        List<String> expResult = null;
-        List<String> result = instance.getNumeriTelefono();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-    }
-
-    @Test
-    public void testGetEmail() {
-        System.out.println("getEmail");
-        Contatto instance = null;
-        List<String> expResult = null;
-        List<String> result = instance.getEmail();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-    }
-
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        Contatto instance = null;
-        String expResult = "";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
+    void testCreazioneValida1() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "123", "456", "789", "a@example.com", "b@example.com", "c@example.com");
+        assertEquals("Mario", c1.getNome());
+        assertEquals("Rossi", c1.getCognome());
+        assertEquals(Arrays.asList("123", "456", "789"), c1.getNumeriTelefono());
+        assertEquals(Arrays.asList("a@example.com", "b@example.com", "c@example.com"), c1.getEmail());
     }
     
 }
