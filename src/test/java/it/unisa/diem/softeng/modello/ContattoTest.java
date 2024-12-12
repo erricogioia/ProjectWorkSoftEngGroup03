@@ -58,4 +58,14 @@ public class ContattoTest {
         assertEquals(Arrays.asList("", "", ""), c1.getEmail());
     }
     
+    /**
+     * Test del metodo di creazione con valori null.
+     */
+    @Test
+    void testCreazioneInvalidaConNull() {
+        assertThrows(IllegalArgumentException.class, () -> { new Contatto("Mario", "Rossi", "123", null, "789", "a@example.com", "b@example.com", "c@example.com"); });
+        assertThrows(IllegalArgumentException.class, () -> { new Contatto("Mario", "Rossi", "123", "456", "789", "a@example.com", null, "c@example.com"); });
+    }
+    
+    
 }
