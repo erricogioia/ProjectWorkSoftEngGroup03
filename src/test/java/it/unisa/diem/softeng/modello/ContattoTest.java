@@ -115,4 +115,14 @@ public class ContattoTest {
         assertTrue(c1.getEmail().contains(lungaEmail.toString()));
     }
     
+    /**
+     * Test per valori minimi accettabili.
+     */
+    @Test
+    void testBoundaryMinimi() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1", "2", "3", "a@a", "b@b", "c@c");
+        assertEquals(Arrays.asList("1", "2", "3"), c1.getNumeriTelefono());
+        assertEquals(Arrays.asList("a@a", "b@b", "c@c"), c1.getEmail());
+    }
+    
 }
