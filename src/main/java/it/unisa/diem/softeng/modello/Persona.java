@@ -102,7 +102,10 @@ public class Persona implements Comparable<Persona> {
     */
     @Override
     public int compareTo(Persona other) {
-        return 0;
+        if(!(this.cognome.equals(other.cognome)))
+            return this.cognome.compareTo(other.cognome);
+        
+        return this.nome.compareTo(other.nome);
     }
     
     /**
