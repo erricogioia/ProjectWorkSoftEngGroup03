@@ -48,7 +48,7 @@ public interface InterfacciaRubrica {
      * @return true se la modifica ha avuto successo, false altrimenti.
      * @see InterfacciaValidaContatto
     */
-    boolean modificaContatto(Contatto contatto);
+    boolean modificaContatto(Contatto contatto, Persona key);
 
     /**
      * @brief Cerca un contatto nella rubrica.

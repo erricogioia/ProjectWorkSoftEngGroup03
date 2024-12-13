@@ -59,7 +59,7 @@ public class Rubrica implements InterfacciaRubrica{
      * @copydoc InterfacciaRubrica::modificaContatto
     */
     @Override
-    public boolean modificaContatto(Contatto contatto) {
+    public boolean modificaContatto(Contatto contatto, Persona key) {
         return true;
     }
     
