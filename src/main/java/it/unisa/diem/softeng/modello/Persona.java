@@ -12,8 +12,7 @@ public class Persona implements Comparable<Persona> {
     
     private String nome;
     private String cognome;
-
-    
+ 
     /**
      * @brief Costruttore della classe Persona.
      * 
