@@ -178,11 +178,14 @@ public class ControlloreVistaPrincipale {
      * 
      * Filtra i contatti nella rubrica in base a una sottostringa passatogli.
      * 
+     * @param newValue Nuovo valore.
      * @pre rubrica non è null.
      * @post La rubrica mostra solo i contatti che corrispondono al criterio di ricerca.
      */
-    public void ricerca() {
-        
+    public void ricerca(String newValue) {
+        tabellaContatti.setItems(FXCollections.observableArrayList(
+            rubrica.cercaContatto(newValue).values()
+            ));
     }
 
     private void mostraPopUpErrore(){
