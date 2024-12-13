@@ -64,7 +64,10 @@ public class Rubrica implements InterfacciaRubrica{
     */
     @Override
     public void rimuoviContatto(Contatto contatto) {
+        if(contatto == null)
+            throw new IllegalArgumentException("Contatto uguale a 'null'");
         
+        this.contatti.remove((Persona)contatto);
     }
    
     /**
