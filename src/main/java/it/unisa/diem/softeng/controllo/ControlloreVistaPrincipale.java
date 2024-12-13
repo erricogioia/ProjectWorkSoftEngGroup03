@@ -33,7 +33,7 @@ import javafx.stage.Stage;
  * @see it.unisa.diem.softeng.servizio::InterfacciaRubrica
  * @see it.unisa.diem.softeng.persistenza::InterfacciaGestoreFile
  */
-public class ControlloreVistaPrincipale {
+public class ControlloreVistaPrincipale implements Initializable {
     
     private InterfacciaRubrica rubrica;
     private InterfacciaGestoreFile gestoreFile;
@@ -200,5 +200,28 @@ public class ControlloreVistaPrincipale {
         contatti.setAll(rubrica.getContatti().values());
         tabellaContatti.setItems(contatti);
     }
+    
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        
+        rubrica = new Rubrica(new ValidaContatto());
+        gestoreFile = new GestoreFile();
+       
+        contatti = FXCollections.observableArrayList(rubrica.getContatti().values());    
+        
+        tabellaContatti.setItems(contatti);
+        
+        nomeCln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getNome()); });
+        cognomeCln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getCognome()); });
+        
+        telefono1Cln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getNumeriTelefono().get(0)); });
+        telefono2Cln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getNumeriTelefono().get(1)); });
+        telefono3Cln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getNumeriTelefono().get(2)); });
+        
+        email1Cln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getEmail().get(0)); });
+        email2Cln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getEmail().get(1)); });
+        email3Cln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getEmail().get(2)); });
+        
+    } 
     
 }
