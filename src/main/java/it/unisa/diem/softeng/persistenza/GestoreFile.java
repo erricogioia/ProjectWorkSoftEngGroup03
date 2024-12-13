@@ -43,7 +43,13 @@ public class GestoreFile implements InterfacciaGestoreFile {
     */
     @Override
     public InterfacciaRubrica importa() throws IOException {
-        return null;
+        FileChooser fc = new FileChooser();
+        File f = fc.showOpenDialog(null);
+        
+        if(f == null)
+            return null;
+        
+        return leggiFile(f);
     }
     
     private void scriviFile(InterfacciaRubrica rubrica, File file) throws IOException {
