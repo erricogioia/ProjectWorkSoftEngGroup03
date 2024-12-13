@@ -72,4 +72,13 @@ public class ValidaContattoTest {
         assertTrue(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con numero di telefono troppo corto.
+     */
+    @Test
+    void testNumeroTelefonoTroppoCorto() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1", "", "", "a@example.com", "", "");
+        assertFalse(validatore.valida(c1));
+    }
+    
 }
