@@ -6,7 +6,7 @@ package it.unisa.diem.softeng.modello;
  * Questa classe viene utilizzata come chiave per la Map di Rubrica per evitare contatti duplicati secondo equals.
  * 
  * @see Contatto
- * @invariant La persona deve avere almeno un nome o un cognome valido.
+ * @invariant La persona deve avere nome e cognome non null.
  */
 public class Persona implements Comparable<Persona> {
     
@@ -23,7 +23,13 @@ public class Persona implements Comparable<Persona> {
      * @param[in] cognome Il cognome della Persona.
      */
     public Persona(String nome, String cognome) {
-
+        
+        if (nome == null || cognome == null)
+            throw new IllegalArgumentException("Almeno uno tra i campi 'Nome' o 'Cognome' è null");
+        
+        this.nome = nome;
+        this.cognome = cognome;
+        
     }
 
     /**
