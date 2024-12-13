@@ -154,6 +154,7 @@ public class ControlloreVistaPrincipale implements Initializable {
             mostraPopUpErrore();
             
         aggiornaTabella();
+        cercaField.setText("");
     }
 
     /**
