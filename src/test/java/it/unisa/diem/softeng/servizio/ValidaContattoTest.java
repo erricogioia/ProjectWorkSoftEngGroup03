@@ -27,4 +27,13 @@ public class ValidaContattoTest {
         assertTrue(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con cognome presente e nome vuoto.
+     */
+    @Test
+    void testCognomePresenteNomeVuoto() {
+        Contatto c1 = new Contatto("", "Rossi", "", "", "", "", "", "");
+        assertTrue(validatore.valida(c1));
+    }
+    
 }
