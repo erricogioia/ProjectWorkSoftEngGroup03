@@ -222,6 +222,22 @@ public class ControlloreVistaPrincipale implements Initializable {
         email2Cln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getEmail().get(1)); });
         email3Cln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getEmail().get(2)); });
         
+        nomeCln.setCellFactory(TextFieldTableCell.forTableColumn());
+        cognomeCln.setCellFactory(TextFieldTableCell.forTableColumn());
+        
+        telefono1Cln.setCellFactory(TextFieldTableCell.forTableColumn());
+        telefono2Cln.setCellFactory(TextFieldTableCell.forTableColumn());
+        telefono3Cln.setCellFactory(TextFieldTableCell.forTableColumn());
+        
+        email1Cln.setCellFactory(TextFieldTableCell.forTableColumn());
+        email2Cln.setCellFactory(TextFieldTableCell.forTableColumn());
+        email3Cln.setCellFactory(TextFieldTableCell.forTableColumn());
+        
+        rimuoviButton.disableProperty().bind(tabellaContatti.getSelectionModel().selectedItemProperty().isNull());
+        
+        cercaField.textProperty().addListener((observable, oldValue, newValue) -> {
+            ricerca(newValue);
+        });
     } 
     
 }
