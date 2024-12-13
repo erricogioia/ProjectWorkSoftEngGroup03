@@ -48,7 +48,15 @@ public class Rubrica implements InterfacciaRubrica{
     */
     @Override
     public boolean creaContatto(Contatto contatto) {
-       return true;
+       boolean contattoValido = this.controlloContatto(contatto);
+                
+        if(contattoValido){
+            Contatto c = this.contatti.putIfAbsent((Persona)contatto, contatto);
+            if(c != null)
+                return false;
+        }
+         
+        return contattoValido;
     }
     
     /**
@@ -73,6 +81,13 @@ public class Rubrica implements InterfacciaRubrica{
     @Override
     public Map<Persona,Contatto> cercaContatto(String str) {
         return null;
+    }
+    
+    private boolean controlloContatto(Contatto contatto) {
+        if(contatto == null)
+            throw new IllegalArgumentException("Contatto uguale a 'null'");
+        
+        return this.valida.valida(contatto);
     }
     
 }
