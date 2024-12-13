@@ -76,7 +76,18 @@ public class Persona implements Comparable<Persona> {
     */
     @Override
     public boolean equals(Object obj) {
-        return true;
+        if(obj == null) 
+            return false;
+        
+        if(this == obj)
+            return true;
+        
+        if(!(obj instanceof Persona))
+            return false;
+        
+        Persona p = (Persona) obj;
+        
+        return p.nome.equals(this.nome) && p.cognome.equals(this.cognome);
     }
 
     /**
