@@ -90,14 +90,5 @@ public class Persona implements Comparable<Persona> {
         return this.nome.compareTo(other.nome);
     }
     
-    /**
-     * @brief Rappresentazione testuale della persona.
-     * @return La rappresentazione testuale.
-    */
-    @Override
-    public String toString() {
-        return "Persona -> Nome: " + this.nome + " - Cognome: " + this.cognome;
-    }
-    
 }
 
