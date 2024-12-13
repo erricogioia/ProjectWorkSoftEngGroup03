@@ -99,4 +99,13 @@ public class ValidaContattoTest {
         assertFalse(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con email assente.
+     */
+    @Test
+    void testEmailAssente() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "", "", "", "", "");
+        assertTrue(validatore.valida(c1));
+    }
+    
 }
