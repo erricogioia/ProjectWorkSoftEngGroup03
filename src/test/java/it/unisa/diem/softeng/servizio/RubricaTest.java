@@ -69,4 +69,16 @@ public class RubricaTest {
         assertThrows(IllegalArgumentException.class, () -> { rubrica.creaContatto(null); });
     }
     
+    /**
+     * Test del metodo rimuoviContatto con c1 esistente.
+     */
+    @Test
+    void testRimuoviContattoEsistente() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "", "1234567890", "1234567890", "", "b@example.com", "c@example.com");
+        rubrica.creaContatto(c1);
+        rubrica.rimuoviContatto(c1);
+        assertFalse(rubrica.getContatti().containsValue(c1));
+        assertTrue(rubrica.getContatti().isEmpty());
+    }
+    
 }
