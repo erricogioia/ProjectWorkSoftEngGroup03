@@ -1,8 +1,8 @@
 package it.unisa.diem.softeng.servizio;
 
-import it.unisa.diem.softeng.servizio.InterfacciaRubrica;
 import it.unisa.diem.softeng.modello.Contatto;
-import javafx.collections.ObservableMap;
+import it.unisa.diem.softeng.modello.Persona;
+import java.util.Map;
 
 /**
  * @brief  La classe Rubrica offre una gestione completa di una Map osservabile di contatti.
@@ -14,7 +14,7 @@ import javafx.collections.ObservableMap;
  * @invariant La rubrica non deve contenere duplicati di contatti o contatti null.
  */
 public class Rubrica implements InterfacciaRubrica{
-    private ObservableMap<String, Contatto> contatti;
+    private Map<String, Contatto> contatti;
     private InterfacciaValidaContatto valida;
 
     /**
@@ -35,7 +35,7 @@ public class Rubrica implements InterfacciaRubrica{
      * @post Nessuna modifica viene apportata alla rubrica.
      * @return Una Map dei contatti.
     */
-    public ObservableMap<String, Contatto> getContatti() {
+    public Map<Persona, Contatto> getContatti() {
         return null;
     }
     
@@ -67,7 +67,7 @@ public class Rubrica implements InterfacciaRubrica{
       * @copydoc InterfacciaRubrica::cercaContatto
     */
     @Override
-    public ObservableMap<String,Contatto> cercaContatto(String str) {
+    public Map<Persona,Contatto> cercaContatto(String str) {
         return null;
     }
     

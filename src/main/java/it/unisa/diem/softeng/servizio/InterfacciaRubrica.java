@@ -1,7 +1,8 @@
 package it.unisa.diem.softeng.servizio;
 
 import it.unisa.diem.softeng.modello.Contatto;
-import javafx.collections.ObservableMap;
+import it.unisa.diem.softeng.modello.Persona;
+import java.util.Map;
 
 /**
  * @brief Interfaccia per la gestione della rubrica.
@@ -12,6 +13,13 @@ import javafx.collections.ObservableMap;
 */
 public interface InterfacciaRubrica {
 
+    /**
+     * @brief Restituisce i contatti nella rubrica.
+     * @post Nessuna modifica viene apportata alla rubrica.
+     * @return Una Map dei contatti.
+    */
+    Map<Persona, Contatto> getContatti();
+    
     /**
      * @brief Aggiunge alla rubrica il contatto passatogli, qualora esso risulti valido.
      * @param[in] contatto Il contatto da aggiungere.
@@ -49,6 +57,6 @@ public interface InterfacciaRubrica {
      * @post La rubrica non viene modificata durante la ricerca.
      * @return Una Map di contatti che corrispondono al criterio di ricerca.
      */
-    ObservableMap<String,Contatto> cercaContatto(String str);
+    Map<Persona,Contatto> cercaContatto(String str);
     
 }

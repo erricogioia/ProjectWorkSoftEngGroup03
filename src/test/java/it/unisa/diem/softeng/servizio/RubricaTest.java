@@ -22,4 +22,13 @@ public class RubricaTest {
         rubrica = new Rubrica(validatore);
     }
     
+    /**
+     * Test del costruttore con validatore valido.
+     */
+    @Test
+    void testCostruttoreValido() {
+        assertNotNull(rubrica);
+        assertTrue(rubrica.getContatti().isEmpty());
+    }
+    
 }
