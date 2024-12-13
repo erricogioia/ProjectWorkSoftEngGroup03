@@ -238,6 +238,7 @@ public class ControlloreVistaPrincipale implements Initializable {
         cercaField.textProperty().addListener((observable, oldValue, newValue) -> {
             ricerca(newValue);
         });
+        
     } 
     
 }
