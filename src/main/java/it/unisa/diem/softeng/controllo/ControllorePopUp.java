@@ -19,7 +19,7 @@ import javafx.stage.Stage;
  * @invariant La rubrica associata non deve essere mai null dopo l'inizializzazione del controllore.
  * @see ControlloreVistaPrincipale
 */
-public class ControllorePopUp {
+public class ControllorePopUp implements Initializable {
     
     private InterfacciaRubrica rubrica;
     private ObservableList<Contatto> contatti;
@@ -93,5 +93,10 @@ public class ControllorePopUp {
     private void chiudiPopUp() {
         Stage s = (Stage) nomeField.getParent().getScene().getWindow();
         s.close();
+    }
+    
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        confermaButton.disableProperty().bind(Bindings.and(nomeField.textProperty().isEmpty(), cognomeField.textProperty().isEmpty()));
     }
 }
