@@ -86,6 +86,11 @@ public class ControllorePopUp implements Initializable {
         alert.showAndWait();
     }
     
+    public void setContatti(ObservableList<Contatto> contatti, InterfacciaRubrica rubrica) {
+        this.contatti = contatti;
+        this.rubrica = rubrica;
+    }
+    
     private void aggiornaTabella() {
         contatti.setAll(rubrica.getContatti().values());
     }
