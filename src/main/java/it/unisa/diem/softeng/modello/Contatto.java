@@ -52,7 +52,7 @@ public class Contatto extends Persona{
      * @return Una lista di numeri di telefono.
      */
     public List<String> getNumeriTelefono() {
-        return null;
+        return this.numeriTelefono;
     }
 
     /**
