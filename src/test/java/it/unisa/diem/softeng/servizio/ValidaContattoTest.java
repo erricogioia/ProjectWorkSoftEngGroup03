@@ -135,4 +135,13 @@ public class ValidaContattoTest {
         assertFalse(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con email in formato non valido (manca il nome utente).
+     */
+    @Test
+    void testEmailFormatoNonValido3() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "", "", "@example.com", "", "");
+        assertFalse(validatore.valida(c1));
+    }
+    
 }
