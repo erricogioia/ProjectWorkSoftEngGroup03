@@ -60,16 +60,7 @@ public class Contatto extends Persona{
      * @return Una lista di email.
      */
     public List<String> getEmail() {
-        return null; 
-    }
-
-    /**
-     * @brief Rappresentazione testuale del contatto.
-     * @return La rappresentazione testuale.
-     */
-    @Override
-    public String toString() {
-        return null;
+        return this.email; 
     }
     
     @Override
