@@ -12,19 +12,19 @@ import java.util.Map;
  * @see it.unisa.diem.softeng.modello::Contatto
 */
 public interface InterfacciaRubrica {
-
+    
     /**
      * @brief Restituisce i contatti nella rubrica.
      * @post Nessuna modifica viene apportata alla rubrica.
      * @return Una Map dei contatti.
     */
     Map<Persona, Contatto> getContatti();
-    
+
     /**
      * @brief Aggiunge alla rubrica il contatto passatogli, qualora esso risulti valido.
      * @param[in] contatto Il contatto da aggiungere.
      * @pre Il contatto non è null.
-     * @post La rubrica contiene un nuovo contatto se il metodo restituisce true.
+     * @post La rubrica contiene un nuovo contatto se il metodo restituisce true e la dimensione della rubrica viene incrementata di uno.
      * @post La rubrica rimane invariata se il metodo restituisce false.
      * @return true se l'aggiunta ha avuto successo, false altrimenti.
      * @see InterfacciaValidaContatto
@@ -35,7 +35,7 @@ public interface InterfacciaRubrica {
      * @brief Rimuove dalla rubrica il contatto passatogli.
      * @param[in] contatto Il contatto da rimuovere.
      * @pre Il contatto non è null.
-     * @post La rubrica non contiene più il contatto.
+     * @post La rubrica non contiene più il contatto e la dimensione della rubrica viene decrementata di uno.
     */
     void rimuoviContatto(Contatto contatto);
 

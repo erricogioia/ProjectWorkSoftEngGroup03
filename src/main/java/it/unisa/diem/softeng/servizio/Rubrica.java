@@ -3,6 +3,7 @@ package it.unisa.diem.softeng.servizio;
 import it.unisa.diem.softeng.modello.Contatto;
 import it.unisa.diem.softeng.modello.Persona;
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * @brief  La classe Rubrica offre una gestione completa di una Map osservabile di contatti.
@@ -12,9 +13,10 @@ import java.util.Map;
  * @see it.unisa.diem.softeng.modello::Contatto
  * @see InterfacciaValidaContatto
  * @invariant La rubrica non deve contenere duplicati di contatti o contatti null.
+ * @invariant Il validatore non deve essere null.
  */
 public class Rubrica implements InterfacciaRubrica{
-    private Map<String, Contatto> contatti;
+    private Map<Persona, Contatto> contatti;
     private InterfacciaValidaContatto valida;
 
     /**
@@ -23,11 +25,15 @@ public class Rubrica implements InterfacciaRubrica{
      * La rubrica viene inizializzata vuota e pronta all'uso, con un validatore per i contatti.
      * 
      * @param[in] valida L'istanza del validatore da utilizzare per validare i contatti.
-     * @pre valida non è null.
      * @post La rubrica è inizializzata ed è vuota.
      */
     public Rubrica(InterfacciaValidaContatto valida) {
+        this.contatti = new TreeMap<>();
         
+        if(valida == null)
+            throw new IllegalArgumentException("Validatore Contatto uguale a 'null'");
+        
+        this.valida = valida;
     }
 
     /**
