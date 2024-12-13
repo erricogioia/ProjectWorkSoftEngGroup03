@@ -188,4 +188,15 @@ public class RubricaTest {
         assertTrue(risultati.containsValue(c2));
     }
     
+    /**
+     * Test del metodo cercaContatto con stringa che non produce risultati.
+     */
+    @Test
+    void testCercaContattoNessunRisultato() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "1234567890", "1234567890", "a@example.com", "b@example.com", "c@example.com");
+        rubrica.creaContatto(c1);
+        Map<Persona, Contatto> risultati = rubrica.cercaContatto("Francesco");
+        assertTrue(risultati.isEmpty());
+    }
+    
 }
