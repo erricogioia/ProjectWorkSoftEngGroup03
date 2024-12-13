@@ -114,7 +114,7 @@ public class Persona implements Comparable<Persona> {
     */
     @Override
     public String toString() {
-        return null;  
+        return "Persona -> Nome: " + this.nome + " - Cognome: " + this.cognome;
     }
     
 }
