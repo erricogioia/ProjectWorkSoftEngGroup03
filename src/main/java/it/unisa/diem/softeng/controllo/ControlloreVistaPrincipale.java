@@ -183,9 +183,8 @@ public class ControlloreVistaPrincipale implements Initializable {
      * @post La rubrica mostra solo i contatti che corrispondono al criterio di ricerca.
      */
     public void ricerca(String newValue) {
-        tabellaContatti.setItems(FXCollections.observableArrayList(
-            rubrica.cercaContatto(newValue).values()
-            ));
+        contatti = FXCollections.observableArrayList(rubrica.cercaContatto(newValue).values());
+        tabellaContatti.setItems(contatti);
     }
 
     private void mostraPopUpErrore(){
