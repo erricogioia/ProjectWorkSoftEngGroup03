@@ -73,8 +73,9 @@ public class ControllorePopUp {
      * @pre Le diverse operazioni devono essere in corso.
      * @post L'operazione corrente viene annullata e i dati non vengono salvati.
     */
+    @FXML
     public void annulla() {
-        
+        this.chiudiPopUp();
     }
 
     private void mostraPopUpErrore(){
