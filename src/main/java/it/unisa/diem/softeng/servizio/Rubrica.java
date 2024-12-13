@@ -75,7 +75,18 @@ public class Rubrica implements InterfacciaRubrica{
     */
     @Override
     public boolean modificaContatto(Contatto contatto, Persona key) {
-        return true;
+        boolean contattoValido = this.controlloContatto(contatto);
+        
+        if(this.contatti.containsKey((Persona)contatto) && this.contatti.containsValue(contatto))
+            return false;                  
+        
+        if(contattoValido && this.contatti.containsKey(key)) {
+            this.contatti.remove(key);
+            this.contatti.put((Persona)contatto, contatto);
+        } else 
+            return false;
+        
+        return contattoValido;
     }
     
     /**
