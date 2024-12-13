@@ -173,4 +173,19 @@ public class RubricaTest {
         assertTrue(risultati.containsValue(c1));
     }
     
+    /**
+     * Test del metodo cercaContatto con risultato.
+     */
+    @Test
+    void testCercaContattoConRisultato2() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "1234567890", "1234567890", "a@example.com", "b@example.com", "c@example.com");
+        Contatto c2 = new Contatto("Luigi", "Bianchi", "1234567890", "1234567890", "1234567890", "x@example.com", "y@example.com", "z@example.com");
+        rubrica.creaContatto(c1);
+        rubrica.creaContatto(c2);
+        Map<Persona, Contatto> risultati = rubrica.cercaContatto("");
+        assertEquals(2, risultati.size());
+        assertTrue(risultati.containsValue(c1));
+        assertTrue(risultati.containsValue(c2));
+    }
+    
 }
