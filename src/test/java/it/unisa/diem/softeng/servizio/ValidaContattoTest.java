@@ -54,4 +54,13 @@ public class ValidaContattoTest {
         assertFalse(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con numero di telefono assente.
+     */
+    @Test
+    void testNumeroTelefonoAssente() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "", "", "", "a@example.com", "", "");
+        assertTrue(validatore.valida(c1));
+    }
+    
 }
