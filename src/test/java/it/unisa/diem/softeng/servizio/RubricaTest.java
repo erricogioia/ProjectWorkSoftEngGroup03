@@ -31,4 +31,12 @@ public class RubricaTest {
         assertTrue(rubrica.getContatti().isEmpty());
     }
     
+    /**
+     * Test del costruttore con validatore nullo.
+     */
+    @Test
+    void testCostruttoreConValidatoreNull() {
+        assertThrows(IllegalArgumentException.class, () -> { new Rubrica(null); });
+    }
+    
 }
