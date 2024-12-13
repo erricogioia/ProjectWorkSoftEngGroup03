@@ -37,7 +37,7 @@ public class Persona implements Comparable<Persona> {
      * @return Il nome della persona.
      */
     public String getNome() {
-        return null;
+        return this.nome;
     }
     
     /**
