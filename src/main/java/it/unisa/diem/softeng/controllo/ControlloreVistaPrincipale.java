@@ -101,8 +101,8 @@ public class ControlloreVistaPrincipale {
      * @post I contatti della rubrica sono salvati su file.
      * @see it.unisa.diem.softeng.persistenza::InterfacciaGestoreFile
      */
-    public void clickEsporta() {
-        
+    public void clickEsporta() throws IOException {
+        gestoreFile.esporta(rubrica);
     }
     
     /**
@@ -113,8 +113,9 @@ public class ControlloreVistaPrincipale {
      * @post La rubrica viene aggiornata per includere i contatti importati.
      * @see it.unisa.diem.softeng.persistenza::InterfacciaGestoreFile
      */
-    public void clickImporta() {
-        
+    public void clickImporta() throws IOException {
+        rubrica = gestoreFile.importa();
+        aggiornaTabella();
     }
 
      /**
@@ -160,6 +161,11 @@ public class ControlloreVistaPrincipale {
 
     private void mostraPopUpErrore(){
         
+    }
+    
+    private void aggiornaTabella(){
+        contatti.setAll(rubrica.getContatti().values());
+        tabellaContatti.setItems(contatti);
     }
     
 }
