@@ -36,4 +36,13 @@ public class ValidaContattoTest {
         assertTrue(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con nome e cognome entrambi presenti.
+     */
+    @Test
+    void testEntrambiPresenti() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "", "", "", "", "", "");
+        assertTrue(validatore.valida(c1));
+    }
+    
 }
