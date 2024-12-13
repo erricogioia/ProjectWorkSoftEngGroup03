@@ -46,8 +46,18 @@ public class GestoreFile implements InterfacciaGestoreFile {
         return null;
     }
     
-    private void scriviFile(InterfacciaRubrica rubrica, File file) {
+    private void scriviFile(InterfacciaRubrica rubrica, File file) throws IOException {
 
+        try(PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
+            pw.println("NOME;COGNOME;TELEFONO1;TELEFONO2;TELEFONO3;EMAIL1;EMAIL2;EMAIL3");
+            
+            for(Contatto c : rubrica.getContatti().values()) {
+                pw.println(c.getNome() + ";" + c.getCognome() + ";" + 
+                           c.getNumeriTelefono().get(0) + ";" + c.getNumeriTelefono().get(1) + ";" + c.getNumeriTelefono().get(2) + ";" +
+                           c.getEmail().get(0) + ";" + c.getEmail().get(1) + ";" + c.getEmail().get(2));
+            }
+        }
+        
     }
 
     private static InterfacciaRubrica leggiFile(File file) {
