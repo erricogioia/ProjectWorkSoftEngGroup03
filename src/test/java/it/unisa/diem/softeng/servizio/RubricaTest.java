@@ -91,4 +91,18 @@ public class RubricaTest {
         assertFalse(rubrica.getContatti().containsValue(c1));
     }
     
+    /**
+     * Test del metodo modificaContatto con c1 esistente. Modifica del campo email/numeroTelefono.
+     */
+    @Test
+    void testModificaContattoEsistente1() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "1234567890", "1234567890", "a@example.com", "b@example.com", "c@example.com");
+        Persona k1 = (Persona) c1;
+        rubrica.creaContatto(c1);
+        Contatto c1Modificato = new Contatto("Mario", "Rossi", "1234567890", "1234567890", "1234567890", "x@example.com", "y@example.com", "z@example.com");
+        assertTrue(rubrica.modificaContatto(c1Modificato, k1));
+        assertTrue(rubrica.getContatti().containsValue(c1Modificato));
+        assertFalse(rubrica.getContatti().containsValue(c1));
+    }
+    
 }
