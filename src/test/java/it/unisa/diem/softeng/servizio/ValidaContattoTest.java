@@ -81,4 +81,13 @@ public class ValidaContattoTest {
         assertFalse(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con numero di telefono troppo lungo.
+     */
+    @Test
+    void testNumeroTelefonoTroppoLungo() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "12345678910", "", "", "a@example.com", "", "");
+        assertFalse(validatore.valida(c1));
+    }
+    
 }
