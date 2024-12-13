@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.softeng.controllo.ControllorePopUp">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4dbe1" height="425.0" stroke="BLACK" strokeType="INSIDE" width="350.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="405.0" stroke="BLACK" strokeType="INSIDE" width="330.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <VBox layoutX="-2.0" layoutY="7.0" prefHeight="397.0" prefWidth="602.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="nomeField" promptText="Nome">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="30.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="cognomeField" promptText="Cognome">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="telefono1Field" promptText="Telefono1">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="telefono2Field" layoutX="10.0" layoutY="37.0" promptText="Telefono2">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="telefono3Field" layoutX="10.0" layoutY="91.0" promptText="Telefono3">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="email1Field" layoutX="10.0" layoutY="64.0" promptText="E-mail1">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="email2Field" layoutX="10.0" layoutY="10.0" promptText="E-mail2">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="email3Field" layoutX="10.0" layoutY="172.0" promptText="E-mail3">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="confermaButton" mnemonicParsing="false" onAction="#crea" text="Conferma">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="35.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="annullaButton" mnemonicParsing="false" onAction="#annulla" text="Annulla">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="35.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>

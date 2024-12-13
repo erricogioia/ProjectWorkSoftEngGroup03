@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.225" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem fx:id="apriItem" mnemonicParsing="false" onAction="#clickImporta" text="Apri" />
+                              <MenuItem fx:id="salvaComeItem" mnemonicParsing="false" onAction="#clickEsporta" text="Salva come..." />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <TextField fx:id="cercaField" promptText="Cerca...">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="creaButton" mnemonicParsing="false" onAction="#clickCrea" text="Crea Contatto">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="rimuoviButton" mnemonicParsing="false" onAction="#rimuovi" text="Rimuovi Contatto">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TableView fx:id="tabellaContatti" editable="true" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="nomeCln" onEditCommit="#modifica" prefWidth="75.0" text="Nome" />
+                <TableColumn fx:id="cognomeCln" onEditCommit="#modifica" prefWidth="75.0" text="Cognome" />
+                  <TableColumn fx:id="telefono1Cln" onEditCommit="#modifica" prefWidth="75.0" text="Telefono 1" />
+                  <TableColumn fx:id="telefono2Cln" onEditCommit="#modifica" prefWidth="75.0" text="Telefono 2" />
+                  <TableColumn fx:id="telefono3Cln" onEditCommit="#modifica" prefWidth="75.0" text="Telefono 3" />
+                  <TableColumn fx:id="email1Cln" onEditCommit="#modifica" prefWidth="75.0" text="E-mail 1" />
+                  <TableColumn fx:id="email2Cln" onEditCommit="#modifica" prefWidth="75.0" text="E-mail 2" />
+                  <TableColumn fx:id="email3Cln" onEditCommit="#modifica" prefWidth="75.0" text="E-mail 3" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
