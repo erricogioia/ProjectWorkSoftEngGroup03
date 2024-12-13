@@ -66,8 +66,34 @@ public class GestoreFile implements InterfacciaGestoreFile {
         
     }
 
-    private static InterfacciaRubrica leggiFile(File file) {
-        return null;
+    private static InterfacciaRubrica leggiFile(File file) throws FileNotFoundException {
+        InterfacciaRubrica ir = new Rubrica(new ValidaContatto());
+        
+        try(Scanner s = new Scanner(new BufferedReader(new FileReader(file)))) {
+            if(s.nextLine() == null)
+                return ir;
+            
+            s.useDelimiter("[;\n]");
+            
+            while(s.hasNext()) {
+                String nome = s.next();                                 
+                String cognome = s.next();
+                
+                String telefono1 = s.next();
+                String telefono2 = s.next();
+                String telefono3 = s.next();
+                
+                String email1 = s.next();
+                String email2 = s.next();
+                String email3 = s.next();
+                
+                Contatto c = new Contatto(nome, cognome, telefono1, telefono2, telefono3, email1, email2, email3);
+                
+                ir.creaContatto(c);
+            }
+        }
+        
+        return ir;
     }
 
 }
