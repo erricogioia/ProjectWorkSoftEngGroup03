@@ -3,9 +3,29 @@ package it.unisa.diem.softeng.controllo;
 import it.unisa.diem.softeng.servizio.InterfacciaRubrica;
 import it.unisa.diem.softeng.persistenza.InterfacciaGestoreFile;
 import it.unisa.diem.softeng.modello.Contatto;
-import java.io.*;
-import javafx.collections.*;
+import it.unisa.diem.softeng.modello.Persona;
+import it.unisa.diem.softeng.persistenza.GestoreFile;
+import it.unisa.diem.softeng.servizio.Rubrica;
+import it.unisa.diem.softeng.servizio.ValidaContatto;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.stage.Stage;
 
 /**
  * @brief Coordina l'interazione tra la vista principale e i dati della rubrica, oltre a delegare operazioni di file a InterfacciaGestoreFile.
@@ -14,9 +34,39 @@ import javafx.scene.control.TableView;
  * @see it.unisa.diem.softeng.persistenza::InterfacciaGestoreFile
  */
 public class ControlloreVistaPrincipale {
+    
     private InterfacciaRubrica rubrica;
-    private TableView<Contatto> tabellaContatti;
     private InterfacciaGestoreFile gestoreFile;
+    private ObservableList<Contatto> contatti;
+    
+    @FXML
+    private TableView<Contatto> tabellaContatti;
+    @FXML
+    private MenuItem apriItem;
+    @FXML
+    private MenuItem salvaComeItem;
+    @FXML
+    private Button creaButton;
+    @FXML
+    private Button rimuoviButton;
+    @FXML
+    private TableColumn<Contatto, String> nomeCln;
+    @FXML
+    private TableColumn<Contatto, String> cognomeCln;
+    @FXML
+    private TableColumn<Contatto, String> telefono1Cln;
+    @FXML
+    private TableColumn<Contatto, String> telefono2Cln;
+    @FXML
+    private TableColumn<Contatto, String> telefono3Cln;
+    @FXML
+    private TableColumn<Contatto, String> email1Cln;
+    @FXML
+    private TableColumn<Contatto, String> email2Cln;
+    @FXML
+    private TableColumn<Contatto, String> email3Cln;
+    @FXML
+    private TextField cercaField;
     
     /**
      * @brief Aggiunge un contatto alla rubrica.
@@ -27,7 +77,19 @@ public class ControlloreVistaPrincipale {
      * @post Il contatto non viene aggiunto alla rubrica, se non valido.
      * @see ControllorePopUp#crea()
     */
-    public void clickCrea() {
+    @FXML
+    public void clickCrea() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("VistaPopUp.fxml"));
+        Parent root = loader.load();
+
+        ControllorePopUp popupController = loader.getController();
+        popupController.setContatti(contatti, rubrica);
+        
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        
+        stage.setScene(scene);
+        stage.show(); 
     }
     
     /**
