@@ -166,8 +166,11 @@ public class ControlloreVistaPrincipale {
      * @post Il contatto selezionato viene rimosso dalla rubrica.
      * @post La rubrica non mostra più il contatto rimosso.
      */
+    @FXML
     public void rimuovi() {
-        
+        rubrica.rimuoviContatto(tabellaContatti.getSelectionModel().getSelectedItem());
+        aggiornaTabella();
+        cercaField.setText("");
     }
 
     /**
