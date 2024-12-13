@@ -50,4 +50,15 @@ public class RubricaTest {
         assertTrue(rubrica.getContatti().containsValue(c1));
     }
     
+    /**
+     * Test del metodo creaContatto con input invalido.
+     */
+    @Test
+    void testCreaContattoInvalido() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1", "", "", "a", "", "");
+        assertFalse(rubrica.creaContatto(c1));
+        assertEquals(0, rubrica.getContatti().size());
+        assertFalse(rubrica.getContatti().containsValue(c1));
+    }
+    
 }
