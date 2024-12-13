@@ -61,4 +61,12 @@ public class RubricaTest {
         assertFalse(rubrica.getContatti().containsValue(c1));
     }
     
+    /**
+     * Test del metodo creaContatto con c1 null.
+     */
+    @Test
+    void testCreaContattoNull() {
+        assertThrows(IllegalArgumentException.class, () -> { rubrica.creaContatto(null); });
+    }
+    
 }
