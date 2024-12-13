@@ -37,12 +37,10 @@ public class Rubrica implements InterfacciaRubrica{
     }
 
     /**
-     * @brief Restituisce i contatti nella rubrica.
-     * @post Nessuna modifica viene apportata alla rubrica.
-     * @return Una Map dei contatti.
+     * @copydoc InterfacciaRubrica::getContatti
     */
     public Map<Persona, Contatto> getContatti() {
-        return null;
+        return this.contatti;
     }
     
     /**
