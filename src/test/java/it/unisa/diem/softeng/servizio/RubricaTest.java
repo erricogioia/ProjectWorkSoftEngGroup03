@@ -81,4 +81,14 @@ public class RubricaTest {
         assertTrue(rubrica.getContatti().isEmpty());
     }
     
+    /**
+     * Test del metodo rimuoviContatto con c1 non esistente.
+     */
+    @Test
+    void testRimuoviContattoNonEsistente() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "1234567890", "1234567890", "a@example.com", "b@example.com", "c@example.com");
+        rubrica.rimuoviContatto(c1);
+        assertFalse(rubrica.getContatti().containsValue(c1));
+    }
+    
 }
