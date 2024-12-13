@@ -39,4 +39,15 @@ public class RubricaTest {
         assertThrows(IllegalArgumentException.class, () -> { new Rubrica(null); });
     }
     
+    /**
+     * Test del metodo creaContatto con input valido.
+     */
+    @Test
+    void testCreaContattoValido() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "", "", "a@example.com", "", "");
+        assertTrue(rubrica.creaContatto(c1));
+        assertEquals(1, rubrica.getContatti().size());
+        assertTrue(rubrica.getContatti().containsValue(c1));
+    }
+    
 }
