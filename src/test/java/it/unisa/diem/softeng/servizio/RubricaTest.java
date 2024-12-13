@@ -119,4 +119,16 @@ public class RubricaTest {
         assertFalse(rubrica.getContatti().containsValue(c1));
     }
     
+    /**
+     * Test del metodo modificaContatto con c1 non esistente.
+     */
+    @Test
+    void testModificaContattoNonEsistente() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "", "", "a@example.com", "b@example.com", "c@example.com");
+        Persona k1 = (Persona) c1;
+        Contatto c1Modificato = new Contatto("Mario", "Rossi", "1234567890", "", "", "x@example.com", "y@example.com", "z@example.com");
+        assertFalse(rubrica.modificaContatto(c1Modificato, k1));
+        assertFalse(rubrica.getContatti().containsValue(c1Modificato));
+    }
+    
 }
