@@ -45,4 +45,13 @@ public class ValidaContattoTest {
         assertTrue(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con nome e cognome entrambi vuoti.
+     */
+    @Test
+    void testNomeECognomeVuoti() {
+        Contatto c1 = new Contatto("", "", "", "", "", "", "", "");
+        assertFalse(validatore.valida(c1));
+    }
+    
 }
