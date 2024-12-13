@@ -79,7 +79,11 @@ public class ControllorePopUp {
     }
 
     private void mostraPopUpErrore(){
-        
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Errore");
+        alert.setHeaderText(null);
+        alert.setContentText("Errore. Dati non validi.");
+        alert.showAndWait();
     }
     
     private void aggiornaTabella() {
