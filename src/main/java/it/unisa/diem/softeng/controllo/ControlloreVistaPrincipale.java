@@ -129,8 +129,31 @@ public class ControlloreVistaPrincipale {
      * @post Il contatto selezionato non viene aggiornato, se le modifiche non risultano valide.
      * @post La rubrica viene aggiornata per riflettere gli eventuali cambiamenti.
      */
-    public void modifica() {
+    @FXML
+    public void modifica(TableColumn.CellEditEvent<Contatto, String> event) {
+        Contatto c = tabellaContatti.getSelectionModel().getSelectedItem();
+
+        String newV = event.getNewValue();
+
+        TableColumn<Contatto, String> colonnaModificata = event.getTableColumn();
+
+        Contatto nuovo = new Contatto(
+            colonnaModificata == nomeCln ? newV : c.getNome(),
+            colonnaModificata == cognomeCln ? newV : c.getCognome(),
+            colonnaModificata == telefono1Cln ? newV : c.getNumeriTelefono().get(0),
+            colonnaModificata == telefono2Cln ? newV : c.getNumeriTelefono().get(1),
+            colonnaModificata == telefono3Cln ? newV : c.getNumeriTelefono().get(2),
+            colonnaModificata == email1Cln ? newV : c.getEmail().get(0),
+            colonnaModificata == email2Cln ? newV : c.getEmail().get(1),
+            colonnaModificata == email3Cln ? newV : c.getEmail().get(2)
+        );
         
+        boolean contattoValido = rubrica.modificaContatto(nuovo, (Persona)c);
+
+        if (!contattoValido)
+            mostraPopUpErrore();
+            
+        aggiornaTabella();
     }
 
     /**
