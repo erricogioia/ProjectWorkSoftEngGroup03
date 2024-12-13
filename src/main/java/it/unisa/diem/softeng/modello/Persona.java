@@ -54,7 +54,7 @@ public class Persona implements Comparable<Persona> {
      * @post Il campo nome è aggiornato con il nuovo valore.
      */
     public void setNome(String nome) {
-        
+        this.nome = nome;
     }
 
     /**
