@@ -63,4 +63,13 @@ public class ValidaContattoTest {
         assertTrue(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con numero di telefono valido.
+     */
+    @Test
+    void testNumeroTelefonoValido() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "", "", "a@example.com", "", "");
+        assertTrue(validatore.valida(c1));
+    }
+    
 }
