@@ -108,4 +108,13 @@ public class ValidaContattoTest {
         assertTrue(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con email valida.
+     */
+    @Test
+    void testEmailValida() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "", "", "", "a@example.com", "", "");
+        assertTrue(validatore.valida(c1));
+    }
+    
 }
