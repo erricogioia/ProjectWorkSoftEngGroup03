@@ -1,5 +1,6 @@
 package it.unisa.diem.softeng.modello;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,9 +8,7 @@ import java.util.List;
  * 
  * Questa classe, estendendo Persona, viene usata per caratterizzare completamente un Contatto all'interno di Rubrica.
  * 
- * @invariant Il contatto deve avere, qualora esistano, numeri di telefono ed email validi.
- * @invariant Il contatto deve avere massimo tre numeri di telefono.
- * @invariant Il contatto deve avere massimo tre email.
+ * @invariant Il contatto deve avere, qualora esistano, numeri di telefono ed email non null.
  * @see Persona
  */
 public class Contatto extends Persona{
@@ -33,6 +32,19 @@ public class Contatto extends Persona{
      */
     public Contatto(String nome, String cognome, String numeroTelefono1, String numeroTelefono2, String numeroTelefono3, String email1, String email2, String email3) {
         super(nome, cognome);
+        
+        if (numeroTelefono1 == null || numeroTelefono2 == null || numeroTelefono3 == null || email1 == null || email2 == null || email3 == null)
+            throw new IllegalArgumentException("Almeno uno tra i campi 'Numero di Telefono' o 'E-mail' è null");
+        
+        this.numeriTelefono = new ArrayList<>();
+        this.numeriTelefono.add(numeroTelefono1);
+        this.numeriTelefono.add(numeroTelefono2);
+        this.numeriTelefono.add(numeroTelefono3);
+        
+        this.email = new ArrayList<>();
+        this.email.add(email1);
+        this.email.add(email2);
+        this.email.add(email3);
     }
 
     /**
@@ -59,5 +71,10 @@ public class Contatto extends Persona{
     public String toString() {
         return null;
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        return false;
+    }  
 }
 
