@@ -90,4 +90,13 @@ public class ValidaContattoTest {
         assertFalse(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con numero di telefono non numerico.
+     */
+    @Test
+    void testNumeroTelefonoNonNumerico() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "12345abcd0", "", "", "a@example.com", "", "");
+        assertFalse(validatore.valida(c1));
+    }
+    
 }
