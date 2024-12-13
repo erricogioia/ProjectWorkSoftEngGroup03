@@ -199,4 +199,12 @@ public class RubricaTest {
         assertTrue(risultati.isEmpty());
     }
     
+    /**
+     * Test del metodo cercaContatto con stringa null.
+     */
+    @Test
+    void testCercaContattoNull() {
+        assertThrows(IllegalArgumentException.class, () -> { rubrica.cercaContatto(null); });
+    }
+    
 }
