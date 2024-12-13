@@ -144,4 +144,13 @@ public class ValidaContattoTest {
         assertFalse(validatore.valida(c1));
     }
     
+    /**
+     * Test del metodo valida con email in formato minimo valido.
+     */
+    @Test
+    void testEmailFormatoMinimoValido() {
+        Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "", "", "a@b.c", "", "");
+        assertTrue(validatore.valida(c1));
+    }
+    
 }
