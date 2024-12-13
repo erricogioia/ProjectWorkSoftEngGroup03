@@ -49,24 +49,6 @@ public class Persona implements Comparable<Persona> {
     }
 
     /**
-     * @brief Imposta un nuovo nome per la persona.
-     * @param[in] nome Il nuovo nome della persona.
-     * @post Il campo nome è aggiornato con il nuovo valore.
-     */
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    /**
-     * @brief Imposta un nuovo cognome per la persona.
-     * @param[in] cognome Il nuovo cognome della persona.
-     * @post Il campo cognome è aggiornato con il nuovo valore.
-     */
-    public void setCognome(String cognome) {
-        this.cognome = cognome;
-    }
-
-    /**
      * @brief Confronta questa persona con un altro oggetto.
      * 
      * Il confronto avviene contemporaneamente secondo il nome e il cognome.
