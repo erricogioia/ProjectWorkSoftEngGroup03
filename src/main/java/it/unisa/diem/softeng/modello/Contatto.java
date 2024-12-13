@@ -65,7 +65,18 @@ public class Contatto extends Persona{
     
     @Override
     public boolean equals(Object obj) {
-        return false;
+        if (this == obj)
+            return true;
+        
+        if (obj == null)
+            return false;
+        
+        if (getClass() != obj.getClass())
+            return false;
+        
+        Contatto c = (Contatto) obj;
+        
+        return super.equals(c) && this.numeriTelefono.equals(c.numeriTelefono) && this.email.equals(c.email);
     }  
 }
 
