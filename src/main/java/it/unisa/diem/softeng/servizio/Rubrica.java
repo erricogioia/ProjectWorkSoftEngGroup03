@@ -94,7 +94,26 @@ public class Rubrica implements InterfacciaRubrica{
     */
     @Override
     public Map<Persona,Contatto> cercaContatto(String str) {
-        return null;
+        if(str == null)
+            throw new IllegalArgumentException("Stringa di ricerca uguale a 'null'");
+        
+        Map<Persona, Contatto> m = new TreeMap<>();
+        
+        for(Contatto c : contatti.values()){
+            if(c.getNome().toUpperCase().startsWith(str.toUpperCase()) || c.getCognome().toUpperCase().startsWith(str.toUpperCase()))
+                m.put((Persona)c, c);
+            else {
+                for(String s1 : c.getNumeriTelefono())
+                    if(s1.startsWith(str))
+                        m.putIfAbsent((Persona)c, c);
+                
+                for(String s2 : c.getEmail())
+                    if(s2.startsWith(str))
+                        m.putIfAbsent((Persona)c, c);
+            }
+        }
+        
+        return m;
     }
     
     private boolean controlloContatto(Contatto contatto) {
