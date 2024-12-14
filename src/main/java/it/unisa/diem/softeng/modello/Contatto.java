@@ -63,6 +63,14 @@ public class Contatto extends Persona{
         return this.email; 
     }
     
+    /**
+     * @brief Confronta questo contatto con un altro oggetto.
+     * 
+     * Il confronto avviene contemporaneamente secondo il nome, il cognome, i numeri di telefono e le e-mail.
+     *
+     * @param[in] obj L'oggetto con cui effettuare il confronto.
+     * @return true se gli oggetti sono uguali, altrimenti false.
+    */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)

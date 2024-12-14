@@ -1,6 +1,5 @@
 package it.unisa.diem.softeng.controllo;
 
-
 import it.unisa.diem.softeng.modello.Contatto;
 import it.unisa.diem.softeng.servizio.InterfacciaRubrica;
 import java.net.URL;
@@ -86,6 +85,14 @@ public class ControllorePopUp implements Initializable {
         alert.showAndWait();
     }
     
+    /**
+    * @brief Imposta i contatti e la rubrica associata.
+    * 
+    * Uniforma la visualizzazione tra i contatti della struttura dati 'rubrica' e la vista principale della tabella.
+    *
+    * @param[in] contatti La lista osservabile dei contatti.
+    * @param[in] rubrica L'interfaccia della rubrica da associare.
+    */
     public void setContatti(ObservableList<Contatto> contatti, InterfacciaRubrica rubrica) {
         this.contatti = contatti;
         this.rubrica = rubrica;
@@ -100,6 +107,11 @@ public class ControllorePopUp implements Initializable {
         s.close();
     }
     
+    /**
+    * @brief Inizializza il controller della vista.
+    *
+    * Configura il pulsante di conferma disabilitandolo quando i campi nome e cognome sono vuoti.
+    */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         confermaButton.disableProperty().bind(Bindings.and(nomeField.textProperty().isEmpty(), cognomeField.textProperty().isEmpty()));

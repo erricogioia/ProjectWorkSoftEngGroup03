@@ -201,6 +201,16 @@ public class ControlloreVistaPrincipale implements Initializable {
         tabellaContatti.setItems(contatti);
     }
     
+    /**
+    * @brief Inizializza il controller della vista e configura la tabella dei contatti.
+    * 
+    * Questo metodo:
+    * - Inizializza la rubrica e il gestore file.
+    * - Popola la tabella dei contatti con i dati dalla rubrica.
+    * - Configura le colonne della tabella per visualizzare e modificare nome, cognome, numeri di telefono ed email.
+    * - Associa l'abilitazione del pulsante di rimozione alla selezione di un contatto nella tabella.
+    * - Aggiunge un listener al campo di ricerca per filtrare i contatti in base al testo inserito.
+    */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
