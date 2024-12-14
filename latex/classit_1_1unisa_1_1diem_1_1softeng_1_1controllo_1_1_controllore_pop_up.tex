@@ -1,0 +1,108 @@
+\doxysection{Riferimenti per la classe it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Pop\+Up}
+\hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up}{}\label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up}\index{it.unisa.diem.softeng.controllo.ControllorePopUp@{it.unisa.diem.softeng.controllo.ControllorePopUp}}
+
+
+Classe \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up}{Controllore\+Pop\+Up} gestisce la creazione delle voci della rubrica.  
+
+
+Diagramma delle classi per it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Pop\+Up\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_a0db291283dd82ebfb94ee075bc781cb8}{crea}} ()
+\begin{DoxyCompactList}\small\item\em Metodo per la creazione di un nuovo contatto nella rubrica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_aa1612c3db4f0c6cc54124d2d10ce3ca5}{annulla}} ()
+\begin{DoxyCompactList}\small\item\em Metodo per annullare l\textquotesingle{}operazione corrente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_a939620889383964101bcf8abaf3c23b5}{set\+Contatti}} (Observable\+List$<$ \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}} $>$ contatti, \mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica}{Interfaccia\+Rubrica}} rubrica)
+\begin{DoxyCompactList}\small\item\em Imposta i contatti e la rubrica associata. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_ad90f054f480d957c2c38293fb9ef4e03}{initialize}} (URL location, Resource\+Bundle resources)
+\begin{DoxyCompactList}\small\item\em Inizializza il controller della vista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+Classe \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up}{Controllore\+Pop\+Up} gestisce la creazione delle voci della rubrica. 
+
+\begin{DoxyInvariant}{Invariante}
+La rubrica associata non deve essere mai null dopo l\textquotesingle{}inizializzazione del controllore. 
+\end{DoxyInvariant}
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale}{Controllore\+Vista\+Principale} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_aa1612c3db4f0c6cc54124d2d10ce3ca5}\index{it.unisa.diem.softeng.controllo.ControllorePopUp@{it.unisa.diem.softeng.controllo.ControllorePopUp}!annulla@{annulla}}
+\index{annulla@{annulla}!it.unisa.diem.softeng.controllo.ControllorePopUp@{it.unisa.diem.softeng.controllo.ControllorePopUp}}
+\doxysubsubsection{\texorpdfstring{annulla()}{annulla()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_aa1612c3db4f0c6cc54124d2d10ce3ca5} 
+void it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Pop\+Up.\+annulla (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Metodo per annullare l\textquotesingle{}operazione corrente. 
+
+Ripristina lo stato precedente senza salvare modifiche nella rubrica.
+
+\begin{DoxyPrecond}{Precondizione}
+Le diverse operazioni devono essere in corso. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondizione}
+L\textquotesingle{}operazione corrente viene annullata e i dati non vengono salvati. 
+\end{DoxyPostcond}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_a0db291283dd82ebfb94ee075bc781cb8}\index{it.unisa.diem.softeng.controllo.ControllorePopUp@{it.unisa.diem.softeng.controllo.ControllorePopUp}!crea@{crea}}
+\index{crea@{crea}!it.unisa.diem.softeng.controllo.ControllorePopUp@{it.unisa.diem.softeng.controllo.ControllorePopUp}}
+\doxysubsubsection{\texorpdfstring{crea()}{crea()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_a0db291283dd82ebfb94ee075bc781cb8} 
+void it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Pop\+Up.\+crea (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Metodo per la creazione di un nuovo contatto nella rubrica. 
+
+\begin{DoxyPostcond}{Postcondizione}
+Il contatto viene aggiunto alla rubrica, se valido. 
+
+Il contatto non viene aggiunto alla rubrica, se non valido. 
+\end{DoxyPostcond}
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_adbc2c15ed20e119ed3eaa29238502f19}{it.\+unisa.\+diem.\+softeng.\+servizio.\+Interfaccia\+Rubrica.\+crea\+Contatto(\+Contatto)} 
+\end{DoxySeeAlso}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_ad90f054f480d957c2c38293fb9ef4e03}\index{it.unisa.diem.softeng.controllo.ControllorePopUp@{it.unisa.diem.softeng.controllo.ControllorePopUp}!initialize@{initialize}}
+\index{initialize@{initialize}!it.unisa.diem.softeng.controllo.ControllorePopUp@{it.unisa.diem.softeng.controllo.ControllorePopUp}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_ad90f054f480d957c2c38293fb9ef4e03} 
+void it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Pop\+Up.\+initialize (\begin{DoxyParamCaption}\item[{URL}]{location}{, }\item[{Resource\+Bundle}]{resources}{}\end{DoxyParamCaption})}
+
+
+
+Inizializza il controller della vista. 
+
+Configura il pulsante di conferma disabilitandolo quando i campi nome e cognome sono vuoti. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_a939620889383964101bcf8abaf3c23b5}\index{it.unisa.diem.softeng.controllo.ControllorePopUp@{it.unisa.diem.softeng.controllo.ControllorePopUp}!setContatti@{setContatti}}
+\index{setContatti@{setContatti}!it.unisa.diem.softeng.controllo.ControllorePopUp@{it.unisa.diem.softeng.controllo.ControllorePopUp}}
+\doxysubsubsection{\texorpdfstring{setContatti()}{setContatti()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_a939620889383964101bcf8abaf3c23b5} 
+void it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Pop\+Up.\+set\+Contatti (\begin{DoxyParamCaption}\item[{Observable\+List$<$ \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}} $>$}]{contatti}{, }\item[{\mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica}{Interfaccia\+Rubrica}}}]{rubrica}{}\end{DoxyParamCaption})}
+
+
+
+Imposta i contatti e la rubrica associata. 
+
+Uniforma la visualizzazione tra i contatti della struttura dati \textquotesingle{}rubrica\textquotesingle{} e la vista principale della tabella.
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\texttt{ in}}  & {\em contatti} & La lista osservabile dei contatti. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rubrica} & L\textquotesingle{}interfaccia della rubrica da associare. \\
+\hline
+\end{DoxyParams}
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/it/unisa/diem/softeng/controllo/Controllore\+Pop\+Up.\+java\end{DoxyCompactItemize}

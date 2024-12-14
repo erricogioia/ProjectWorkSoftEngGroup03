@@ -1,0 +1,196 @@
+\doxysection{Riferimenti per la classe it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Vista\+Principale}
+\hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale}{}\label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale}\index{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}}
+
+
+Coordina l\textquotesingle{}interazione tra la vista principale e i dati della rubrica, oltre a delegare operazioni di file a Interfaccia\+Gestore\+File.  
+
+
+Diagramma delle classi per it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Vista\+Principale\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a27cb1a23c169507898cd8f949e72338a}{click\+Crea}} ()  throws IOException 
+\begin{DoxyCompactList}\small\item\em Aggiunge un contatto alla rubrica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a961ce1ea3c6d7586c43d2eb77f41c9a4}{click\+Esporta}} ()  throws IOException 
+\begin{DoxyCompactList}\small\item\em Gestisce il click sul pulsante "{}\+Esporta"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_ad72cd38ccaf308b7f0f7a2ee10af75c4}{click\+Importa}} ()  throws IOException 
+\begin{DoxyCompactList}\small\item\em Gestisce il click sul pulsante "{}\+Importa"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a9b490fa87a3dbd1d3d11531e115e6eb3}{modifica}} (Table\+Column.\+Cell\+Edit\+Event$<$ \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}}, String $>$ event)
+\begin{DoxyCompactList}\small\item\em Modifica un contatto dalla rubrica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a19eb1834096482a372741370376e493a}{rimuovi}} ()
+\begin{DoxyCompactList}\small\item\em Rimuove un contatto dalla rubrica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_af06a3900152de10cad3e3f4751daf4f5}{ricerca}} (String new\+Value)
+\begin{DoxyCompactList}\small\item\em Ricerca un contatto nella rubrica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a84b05456f10ee9391c8d466831983cdf}{initialize}} (URL location, Resource\+Bundle resources)
+\begin{DoxyCompactList}\small\item\em Inizializza il controller della vista e configura la tabella dei contatti. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+Coordina l\textquotesingle{}interazione tra la vista principale e i dati della rubrica, oltre a delegare operazioni di file a Interfaccia\+Gestore\+File. 
+
+\begin{DoxyInvariant}{Invariante}
+La rubrica associata non deve essere mai null dopo l\textquotesingle{}inizializzazione del controllore. 
+\end{DoxyInvariant}
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica}{it.\+unisa.\+diem.\+softeng.\+servizio.\+Interfaccia\+Rubrica} 
+
+\doxylink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_interfaccia_gestore_file}{it.\+unisa.\+diem.\+softeng.\+persistenza.\+Interfaccia\+Gestore\+File} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a27cb1a23c169507898cd8f949e72338a}\index{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}!clickCrea@{clickCrea}}
+\index{clickCrea@{clickCrea}!it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}}
+\doxysubsubsection{\texorpdfstring{clickCrea()}{clickCrea()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a27cb1a23c169507898cd8f949e72338a} 
+void it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Vista\+Principale.\+click\+Crea (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws IOException}
+
+
+
+Aggiunge un contatto alla rubrica. 
+
+L\textquotesingle{}aggiunta di un contatto viene realizzata richiamando il metodo crea() di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up}{Controllore\+Pop\+Up}.
+
+\begin{DoxyPostcond}{Postcondizione}
+Il contatto viene aggiunto alla rubrica, se valido. 
+
+Il contatto non viene aggiunto alla rubrica, se non valido. 
+\end{DoxyPostcond}
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_pop_up_a0db291283dd82ebfb94ee075bc781cb8}{Controllore\+Pop\+Up.\+crea()} 
+\end{DoxySeeAlso}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a961ce1ea3c6d7586c43d2eb77f41c9a4}\index{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}!clickEsporta@{clickEsporta}}
+\index{clickEsporta@{clickEsporta}!it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}}
+\doxysubsubsection{\texorpdfstring{clickEsporta()}{clickEsporta()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a961ce1ea3c6d7586c43d2eb77f41c9a4} 
+void it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Vista\+Principale.\+click\+Esporta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws IOException}
+
+
+
+Gestisce il click sul pulsante "{}\+Esporta"{}. 
+
+L\textquotesingle{}esportazione viene realizzata richiamando il metodo esporta() di Gestore\+File.
+
+\begin{DoxyPrecond}{Precondizione}
+La rubrica deve essere inizializzata. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondizione}
+I contatti della rubrica sono salvati su file. 
+\end{DoxyPostcond}
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_interfaccia_gestore_file}{it.\+unisa.\+diem.\+softeng.\+persistenza.\+Interfaccia\+Gestore\+File} 
+\end{DoxySeeAlso}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_ad72cd38ccaf308b7f0f7a2ee10af75c4}\index{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}!clickImporta@{clickImporta}}
+\index{clickImporta@{clickImporta}!it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}}
+\doxysubsubsection{\texorpdfstring{clickImporta()}{clickImporta()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_ad72cd38ccaf308b7f0f7a2ee10af75c4} 
+void it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Vista\+Principale.\+click\+Importa (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws IOException}
+
+
+
+Gestisce il click sul pulsante "{}\+Importa"{}. 
+
+L\textquotesingle{}importazione viene realizzata richiamando il metodo importa() di Gestore\+File.
+
+\begin{DoxyPostcond}{Postcondizione}
+La rubrica viene aggiornata per includere i contatti importati. 
+\end{DoxyPostcond}
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_interfaccia_gestore_file}{it.\+unisa.\+diem.\+softeng.\+persistenza.\+Interfaccia\+Gestore\+File} 
+\end{DoxySeeAlso}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a84b05456f10ee9391c8d466831983cdf}\index{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}!initialize@{initialize}}
+\index{initialize@{initialize}!it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a84b05456f10ee9391c8d466831983cdf} 
+void it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Vista\+Principale.\+initialize (\begin{DoxyParamCaption}\item[{URL}]{location}{, }\item[{Resource\+Bundle}]{resources}{}\end{DoxyParamCaption})}
+
+
+
+Inizializza il controller della vista e configura la tabella dei contatti. 
+
+Questo metodo\+:
+\begin{DoxyItemize}
+\item Inizializza la rubrica e il gestore file.
+\item Popola la tabella dei contatti con i dati dalla rubrica.
+\item Configura le colonne della tabella per visualizzare e modificare nome, cognome, numeri di telefono ed email.
+\item Associa l\textquotesingle{}abilitazione del pulsante di rimozione alla selezione di un contatto nella tabella.
+\item Aggiunge un listener al campo di ricerca per filtrare i contatti in base al testo inserito. 
+\end{DoxyItemize}\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a9b490fa87a3dbd1d3d11531e115e6eb3}\index{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}!modifica@{modifica}}
+\index{modifica@{modifica}!it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}}
+\doxysubsubsection{\texorpdfstring{modifica()}{modifica()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a9b490fa87a3dbd1d3d11531e115e6eb3} 
+void it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Vista\+Principale.\+modifica (\begin{DoxyParamCaption}\item[{Table\+Column.\+Cell\+Edit\+Event$<$ \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}}, String $>$}]{event}{}\end{DoxyParamCaption})}
+
+
+
+Modifica un contatto dalla rubrica. 
+
+Modifica i dettagli del contatto selezionato, se le modifiche risultano valide.
+
+\begin{DoxyPrecond}{Precondizione}
+La rubrica non è null. 
+
+Un contatto deve essere selezionato. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondizione}
+Il contatto selezionato viene aggiornato nella rubrica, se le modifiche risultano valide. 
+
+Il contatto selezionato non viene aggiornato, se le modifiche non risultano valide. 
+
+La rubrica viene aggiornata per riflettere gli eventuali cambiamenti. 
+\end{DoxyPostcond}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_af06a3900152de10cad3e3f4751daf4f5}\index{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}!ricerca@{ricerca}}
+\index{ricerca@{ricerca}!it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}}
+\doxysubsubsection{\texorpdfstring{ricerca()}{ricerca()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_af06a3900152de10cad3e3f4751daf4f5} 
+void it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Vista\+Principale.\+ricerca (\begin{DoxyParamCaption}\item[{String}]{new\+Value}{}\end{DoxyParamCaption})}
+
+
+
+Ricerca un contatto nella rubrica. 
+
+Filtra i contatti nella rubrica in base a una sottostringa passatogli.
+
+
+\begin{DoxyParams}{Parametri}
+{\em new\+Value} & Nuovo valore. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondizione}
+rubrica non è null. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondizione}
+La rubrica mostra solo i contatti che corrispondono al criterio di ricerca. 
+\end{DoxyPostcond}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a19eb1834096482a372741370376e493a}\index{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}!rimuovi@{rimuovi}}
+\index{rimuovi@{rimuovi}!it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale@{it.unisa.diem.softeng.controllo.ControlloreVistaPrincipale}}
+\doxysubsubsection{\texorpdfstring{rimuovi()}{rimuovi()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1controllo_1_1_controllore_vista_principale_a19eb1834096482a372741370376e493a} 
+void it.\+unisa.\+diem.\+softeng.\+controllo.\+Controllore\+Vista\+Principale.\+rimuovi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Rimuove un contatto dalla rubrica. 
+
+Rimuove il contatto selezionato dalla rubrica.
+
+\begin{DoxyPrecond}{Precondizione}
+rubrica non è null. 
+
+Un contatto deve essere selezionato. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondizione}
+Il contatto selezionato viene rimosso dalla rubrica. 
+
+La rubrica non mostra più il contatto rimosso. 
+\end{DoxyPostcond}
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/it/unisa/diem/softeng/controllo/Controllore\+Vista\+Principale.\+java\end{DoxyCompactItemize}

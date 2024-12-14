@@ -1,0 +1,183 @@
+\doxysection{Riferimenti per l\textquotesingle{}interfaccia it.\+unisa.\+diem.\+softeng.\+servizio.\+Interfaccia\+Rubrica}
+\hypertarget{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica}{}\label{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica}\index{it.unisa.diem.softeng.servizio.InterfacciaRubrica@{it.unisa.diem.softeng.servizio.InterfacciaRubrica}}
+
+
+Interfaccia per la gestione della rubrica.  
+
+
+Diagramma delle classi per it.\+unisa.\+diem.\+softeng.\+servizio.\+Interfaccia\+Rubrica\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Map$<$ \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}}, \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}} $>$ \mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_ad8f0205f8e7cd4585fc6f6efa53a6610}{get\+Contatti}} ()
+\begin{DoxyCompactList}\small\item\em Restituisce i contatti nella rubrica. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_adbc2c15ed20e119ed3eaa29238502f19}{crea\+Contatto}} (\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}} contatto)
+\begin{DoxyCompactList}\small\item\em Aggiunge alla rubrica il contatto passatogli, qualora esso risulti valido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_aa55549691724246afcb240879bfc6d30}{rimuovi\+Contatto}} (\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}} contatto)
+\begin{DoxyCompactList}\small\item\em Rimuove dalla rubrica il contatto passatogli. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_a28faced732c8723fc9b4d6c698711249}{modifica\+Contatto}} (\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}} contatto, \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}} key)
+\begin{DoxyCompactList}\small\item\em Modifica un contatto esistente nella rubrica, qualora la modifica risulti valida. \end{DoxyCompactList}\item 
+Map$<$ \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}}, \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}} $>$ \mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_a0592aed94bbca035935e318263c90bcb}{cerca\+Contatto}} (String str)
+\begin{DoxyCompactList}\small\item\em Cerca un contatto nella rubrica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+Interfaccia per la gestione della rubrica. 
+
+Questa interfaccia definisce i metodi fondamentali per creare, modificare, rimuovere e cercare contatti in una rubrica.
+
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{it.\+unisa.\+diem.\+softeng.\+modello.\+Contatto} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\Hypertarget{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_a0592aed94bbca035935e318263c90bcb}\index{it.unisa.diem.softeng.servizio.InterfacciaRubrica@{it.unisa.diem.softeng.servizio.InterfacciaRubrica}!cercaContatto@{cercaContatto}}
+\index{cercaContatto@{cercaContatto}!it.unisa.diem.softeng.servizio.InterfacciaRubrica@{it.unisa.diem.softeng.servizio.InterfacciaRubrica}}
+\doxysubsubsection{\texorpdfstring{cercaContatto()}{cercaContatto()}}
+{\footnotesize\ttfamily \label{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_a0592aed94bbca035935e318263c90bcb} 
+Map$<$ \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}}, \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}} $>$ it.\+unisa.\+diem.\+softeng.\+servizio.\+Interfaccia\+Rubrica.\+cerca\+Contatto (\begin{DoxyParamCaption}\item[{String}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Cerca un contatto nella rubrica. 
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\texttt{ in}}  & {\em str} & La sottostringa da ricercare nella rubrica. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondizione}
+La stringa non è null. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondizione}
+La rubrica non viene modificata durante la ricerca. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Restituisce}
+Una Map di contatti che corrispondono al criterio di ricerca. 
+\end{DoxyReturn}
+
+
+Implementato in \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_rubrica_a53e4e68d0190bd9958e557c3362e1bbc}{it.\+unisa.\+diem.\+softeng.\+servizio.\+Rubrica}}.
+
+\Hypertarget{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_adbc2c15ed20e119ed3eaa29238502f19}\index{it.unisa.diem.softeng.servizio.InterfacciaRubrica@{it.unisa.diem.softeng.servizio.InterfacciaRubrica}!creaContatto@{creaContatto}}
+\index{creaContatto@{creaContatto}!it.unisa.diem.softeng.servizio.InterfacciaRubrica@{it.unisa.diem.softeng.servizio.InterfacciaRubrica}}
+\doxysubsubsection{\texorpdfstring{creaContatto()}{creaContatto()}}
+{\footnotesize\ttfamily \label{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_adbc2c15ed20e119ed3eaa29238502f19} 
+boolean it.\+unisa.\+diem.\+softeng.\+servizio.\+Interfaccia\+Rubrica.\+crea\+Contatto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}}}]{contatto}{}\end{DoxyParamCaption})}
+
+
+
+Aggiunge alla rubrica il contatto passatogli, qualora esso risulti valido. 
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\texttt{ in}}  & {\em contatto} & Il contatto da aggiungere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondizione}
+Il contatto non è null. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondizione}
+La rubrica contiene un nuovo contatto se il metodo restituisce true e la dimensione della rubrica viene incrementata di uno. 
+
+La rubrica rimane invariata se il metodo restituisce false. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Restituisce}
+true se l\textquotesingle{}aggiunta ha avuto successo, false altrimenti. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_valida_contatto}{Interfaccia\+Valida\+Contatto} 
+\end{DoxySeeAlso}
+
+
+Implementato in \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_rubrica_a9a714ded6daceddaf1b8f7ea741e0d78}{it.\+unisa.\+diem.\+softeng.\+servizio.\+Rubrica}}.
+
+\Hypertarget{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_ad8f0205f8e7cd4585fc6f6efa53a6610}\index{it.unisa.diem.softeng.servizio.InterfacciaRubrica@{it.unisa.diem.softeng.servizio.InterfacciaRubrica}!getContatti@{getContatti}}
+\index{getContatti@{getContatti}!it.unisa.diem.softeng.servizio.InterfacciaRubrica@{it.unisa.diem.softeng.servizio.InterfacciaRubrica}}
+\doxysubsubsection{\texorpdfstring{getContatti()}{getContatti()}}
+{\footnotesize\ttfamily \label{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_ad8f0205f8e7cd4585fc6f6efa53a6610} 
+Map$<$ \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}}, \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}} $>$ it.\+unisa.\+diem.\+softeng.\+servizio.\+Interfaccia\+Rubrica.\+get\+Contatti (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Restituisce i contatti nella rubrica. 
+
+\begin{DoxyPostcond}{Postcondizione}
+Nessuna modifica viene apportata alla rubrica. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Restituisce}
+Una Map dei contatti. 
+\end{DoxyReturn}
+
+
+Implementato in \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_rubrica_ad67f1693cfdb12f746448a6398ed9eaf}{it.\+unisa.\+diem.\+softeng.\+servizio.\+Rubrica}}.
+
+\Hypertarget{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_a28faced732c8723fc9b4d6c698711249}\index{it.unisa.diem.softeng.servizio.InterfacciaRubrica@{it.unisa.diem.softeng.servizio.InterfacciaRubrica}!modificaContatto@{modificaContatto}}
+\index{modificaContatto@{modificaContatto}!it.unisa.diem.softeng.servizio.InterfacciaRubrica@{it.unisa.diem.softeng.servizio.InterfacciaRubrica}}
+\doxysubsubsection{\texorpdfstring{modificaContatto()}{modificaContatto()}}
+{\footnotesize\ttfamily \label{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_a28faced732c8723fc9b4d6c698711249} 
+boolean it.\+unisa.\+diem.\+softeng.\+servizio.\+Interfaccia\+Rubrica.\+modifica\+Contatto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}}}]{contatto}{, }\item[{\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}}}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Modifica un contatto esistente nella rubrica, qualora la modifica risulti valida. 
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\texttt{ in}}  & {\em contatto} & Il contatto già modificato. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondizione}
+Il contatto non è null. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondizione}
+Il contatto esistente nella rubrica viene sostituito dal contatto modificato se il metodo restituisce true. 
+
+Il contatto esistente nella rubrica rimane invariato se il metodo restituisce false. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Restituisce}
+true se la modifica ha avuto successo, false altrimenti. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_valida_contatto}{Interfaccia\+Valida\+Contatto} 
+\end{DoxySeeAlso}
+
+
+Implementato in \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_rubrica_a78d3ad4b29924520de92682408253081}{it.\+unisa.\+diem.\+softeng.\+servizio.\+Rubrica}}.
+
+\Hypertarget{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_aa55549691724246afcb240879bfc6d30}\index{it.unisa.diem.softeng.servizio.InterfacciaRubrica@{it.unisa.diem.softeng.servizio.InterfacciaRubrica}!rimuoviContatto@{rimuoviContatto}}
+\index{rimuoviContatto@{rimuoviContatto}!it.unisa.diem.softeng.servizio.InterfacciaRubrica@{it.unisa.diem.softeng.servizio.InterfacciaRubrica}}
+\doxysubsubsection{\texorpdfstring{rimuoviContatto()}{rimuoviContatto()}}
+{\footnotesize\ttfamily \label{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica_aa55549691724246afcb240879bfc6d30} 
+void it.\+unisa.\+diem.\+softeng.\+servizio.\+Interfaccia\+Rubrica.\+rimuovi\+Contatto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}}}]{contatto}{}\end{DoxyParamCaption})}
+
+
+
+Rimuove dalla rubrica il contatto passatogli. 
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\texttt{ in}}  & {\em contatto} & Il contatto da rimuovere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondizione}
+Il contatto non è null. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondizione}
+La rubrica non contiene più il contatto e la dimensione della rubrica viene decrementata di uno. 
+\end{DoxyPostcond}
+
+
+Implementato in \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_rubrica_ab7a8179038a93be2474b7046f472b6a5}{it.\+unisa.\+diem.\+softeng.\+servizio.\+Rubrica}}.
+
+
+
+La documentazione per questa interfaccia è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/it/unisa/diem/softeng/servizio/Interfaccia\+Rubrica.\+java\end{DoxyCompactItemize}

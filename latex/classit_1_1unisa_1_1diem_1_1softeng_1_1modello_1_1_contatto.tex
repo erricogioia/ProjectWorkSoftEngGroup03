@@ -1,0 +1,140 @@
+\doxysection{Riferimenti per la classe it.\+unisa.\+diem.\+softeng.\+modello.\+Contatto}
+\hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{}\label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}\index{it.unisa.diem.softeng.modello.Contatto@{it.unisa.diem.softeng.modello.Contatto}}
+
+
+Rappresenta un contatto nella rubrica.  
+
+
+Diagramma delle classi per it.\+unisa.\+diem.\+softeng.\+modello.\+Contatto\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_af96424fbba54afda9924c738285e915f}{Contatto}} (String nome, String cognome, String numero\+Telefono1, String numero\+Telefono2, String numero\+Telefono3, String email1, String email2, String email3)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}. \end{DoxyCompactList}\item 
+List$<$ String $>$ \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_ad3ad2b417e5881ca2f6e516abe421c81}{get\+Numeri\+Telefono}} ()
+\begin{DoxyCompactList}\small\item\em Ottiene i numeri di telefono del contatto. \end{DoxyCompactList}\item 
+List$<$ String $>$ \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_aa947d806e6c2642bc32807bb3f04460e}{get\+Email}} ()
+\begin{DoxyCompactList}\small\item\em Ottiene gli indirizzi email del contatto. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_aa341c28313f9ba11325a077cd68b72d0}{equals}} (Object obj)
+\begin{DoxyCompactList}\small\item\em Confronta questo contatto con un altro oggetto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri pubblici ereditati da \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{it.\+unisa.\+diem.\+softeng.\+modello.\+Persona}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a9c019ab81bd3794e975cde9fadceaadf}{Persona}} (String nome, String cognome)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a7b5a4683b24bfd44d4704bf35680f0fb}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Ottiene il nome della persona. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a4cac0323f302f9ec49990cbe4ab8ed44}{get\+Cognome}} ()
+\begin{DoxyCompactList}\small\item\em Ottiene il cognome della persona. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a8db67483ef455cfecd0502baebac9d30}{compare\+To}} (\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}} other)
+\begin{DoxyCompactList}\small\item\em Compara questa persona con un\textquotesingle{}altra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+Rappresenta un contatto nella rubrica. 
+
+Questa classe, estendendo \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}, viene usata per caratterizzare completamente un \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto} all\textquotesingle{}interno di Rubrica.
+
+\begin{DoxyInvariant}{Invariante}
+Il contatto deve avere, qualora esistano, numeri di telefono ed email non null. 
+\end{DoxyInvariant}
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentazione dei costruttori e dei distruttori}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_af96424fbba54afda9924c738285e915f}\index{it.unisa.diem.softeng.modello.Contatto@{it.unisa.diem.softeng.modello.Contatto}!Contatto@{Contatto}}
+\index{Contatto@{Contatto}!it.unisa.diem.softeng.modello.Contatto@{it.unisa.diem.softeng.modello.Contatto}}
+\doxysubsubsection{\texorpdfstring{Contatto()}{Contatto()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_af96424fbba54afda9924c738285e915f} 
+it.\+unisa.\+diem.\+softeng.\+modello.\+Contatto.\+Contatto (\begin{DoxyParamCaption}\item[{String}]{nome}{, }\item[{String}]{cognome}{, }\item[{String}]{numero\+Telefono1}{, }\item[{String}]{numero\+Telefono2}{, }\item[{String}]{numero\+Telefono3}{, }\item[{String}]{email1}{, }\item[{String}]{email2}{, }\item[{String}]{email3}{}\end{DoxyParamCaption})}
+
+
+
+Costruttore della classe \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}. 
+
+Qualora venisse inserito un sottoinsieme dei parametri relativi ai numeri di telefono o alle email, la rimanente parte conterrà stringhe vuote.
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\texttt{ in}}  & {\em nome} & Il nome della \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cognome} & Il cognome della \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em numero\+Telefono1} & Il primo numero di telefono di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em numero\+Telefono2} & Il secondo numero di telefono di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em numero\+Telefono3} & Il terzo numero di telefono di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em email1} & La prima email di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em email2} & La seconda email di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em email3} & La terza email di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_aa341c28313f9ba11325a077cd68b72d0}\index{it.unisa.diem.softeng.modello.Contatto@{it.unisa.diem.softeng.modello.Contatto}!equals@{equals}}
+\index{equals@{equals}!it.unisa.diem.softeng.modello.Contatto@{it.unisa.diem.softeng.modello.Contatto}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_aa341c28313f9ba11325a077cd68b72d0} 
+boolean it.\+unisa.\+diem.\+softeng.\+modello.\+Contatto.\+equals (\begin{DoxyParamCaption}\item[{Object}]{obj}{}\end{DoxyParamCaption})}
+
+
+
+Confronta questo contatto con un altro oggetto. 
+
+Il confronto avviene contemporaneamente secondo il nome, il cognome, i numeri di telefono e le e-\/mail.
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\texttt{ in}}  & {\em obj} & L\textquotesingle{}oggetto con cui effettuare il confronto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+true se gli oggetti sono uguali, altrimenti false. 
+\end{DoxyReturn}
+
+
+Reimplementa \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_ac5337261a58febb8e0c26bc1a790bebc}{it.\+unisa.\+diem.\+softeng.\+modello.\+Persona}}.
+
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_aa947d806e6c2642bc32807bb3f04460e}\index{it.unisa.diem.softeng.modello.Contatto@{it.unisa.diem.softeng.modello.Contatto}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!it.unisa.diem.softeng.modello.Contatto@{it.unisa.diem.softeng.modello.Contatto}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_aa947d806e6c2642bc32807bb3f04460e} 
+List$<$ String $>$ it.\+unisa.\+diem.\+softeng.\+modello.\+Contatto.\+get\+Email (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ottiene gli indirizzi email del contatto. 
+
+\begin{DoxyReturn}{Restituisce}
+Una lista di email. 
+\end{DoxyReturn}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_ad3ad2b417e5881ca2f6e516abe421c81}\index{it.unisa.diem.softeng.modello.Contatto@{it.unisa.diem.softeng.modello.Contatto}!getNumeriTelefono@{getNumeriTelefono}}
+\index{getNumeriTelefono@{getNumeriTelefono}!it.unisa.diem.softeng.modello.Contatto@{it.unisa.diem.softeng.modello.Contatto}}
+\doxysubsubsection{\texorpdfstring{getNumeriTelefono()}{getNumeriTelefono()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_ad3ad2b417e5881ca2f6e516abe421c81} 
+List$<$ String $>$ it.\+unisa.\+diem.\+softeng.\+modello.\+Contatto.\+get\+Numeri\+Telefono (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ottiene i numeri di telefono del contatto. 
+
+\begin{DoxyReturn}{Restituisce}
+Una lista di numeri di telefono. 
+\end{DoxyReturn}
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/it/unisa/diem/softeng/modello/Contatto.\+java\end{DoxyCompactItemize}

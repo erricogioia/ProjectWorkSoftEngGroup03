@@ -1,0 +1,142 @@
+\doxysection{Riferimenti per la classe it.\+unisa.\+diem.\+softeng.\+modello.\+Persona}
+\hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{}\label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}\index{it.unisa.diem.softeng.modello.Persona@{it.unisa.diem.softeng.modello.Persona}}
+
+
+Rappresenta una persona con nome e cognome.  
+
+
+Diagramma delle classi per it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a9c019ab81bd3794e975cde9fadceaadf}{Persona}} (String nome, String cognome)
+\begin{DoxyCompactList}\small\item\em Costruttore della classe \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a7b5a4683b24bfd44d4704bf35680f0fb}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Ottiene il nome della persona. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a4cac0323f302f9ec49990cbe4ab8ed44}{get\+Cognome}} ()
+\begin{DoxyCompactList}\small\item\em Ottiene il cognome della persona. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_ac5337261a58febb8e0c26bc1a790bebc}{equals}} (Object obj)
+\begin{DoxyCompactList}\small\item\em Confronta questa persona con un altro oggetto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a8db67483ef455cfecd0502baebac9d30}{compare\+To}} (\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}} other)
+\begin{DoxyCompactList}\small\item\em Compara questa persona con un\textquotesingle{}altra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+Rappresenta una persona con nome e cognome. 
+
+Questa classe viene utilizzata come chiave per la Map di Rubrica per evitare contatti duplicati secondo equals.
+
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto} 
+\end{DoxySeeAlso}
+\begin{DoxyInvariant}{Invariante}
+La persona deve avere nome e cognome non null. 
+\end{DoxyInvariant}
+
+
+\doxysubsection{Documentazione dei costruttori e dei distruttori}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a9c019ab81bd3794e975cde9fadceaadf}\index{it.unisa.diem.softeng.modello.Persona@{it.unisa.diem.softeng.modello.Persona}!Persona@{Persona}}
+\index{Persona@{Persona}!it.unisa.diem.softeng.modello.Persona@{it.unisa.diem.softeng.modello.Persona}}
+\doxysubsubsection{\texorpdfstring{Persona()}{Persona()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a9c019ab81bd3794e975cde9fadceaadf} 
+it.\+unisa.\+diem.\+softeng.\+modello.\+Persona.\+Persona (\begin{DoxyParamCaption}\item[{String}]{nome}{, }\item[{String}]{cognome}{}\end{DoxyParamCaption})}
+
+
+
+Costruttore della classe \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}. 
+
+Qualora venisse inserito solo uno dei due parametri, l\textquotesingle{}altro conterrà una stringa vuota.
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\texttt{ in}}  & {\em nome} & Il nome della \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cognome} & Il cognome della \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a8db67483ef455cfecd0502baebac9d30}\index{it.unisa.diem.softeng.modello.Persona@{it.unisa.diem.softeng.modello.Persona}!compareTo@{compareTo}}
+\index{compareTo@{compareTo}!it.unisa.diem.softeng.modello.Persona@{it.unisa.diem.softeng.modello.Persona}}
+\doxysubsubsection{\texorpdfstring{compareTo()}{compareTo()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a8db67483ef455cfecd0502baebac9d30} 
+int it.\+unisa.\+diem.\+softeng.\+modello.\+Persona.\+compare\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}}}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Compara questa persona con un\textquotesingle{}altra. 
+
+Il confronto avviene, in ordine alfabetico, primariamente secondo il cognome e successivamente tramite il nome, rimanendo coerenti con equals.
+
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_ac5337261a58febb8e0c26bc1a790bebc}{equals()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\texttt{ in}}  & {\em other} & La persona con cui effettuare il confronto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+Un valore negativo, zero o positivo se questa persona è rispettivamente minore, uguale o maggiore, secondo il criterio summenzionato. 
+\end{DoxyReturn}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_ac5337261a58febb8e0c26bc1a790bebc}\index{it.unisa.diem.softeng.modello.Persona@{it.unisa.diem.softeng.modello.Persona}!equals@{equals}}
+\index{equals@{equals}!it.unisa.diem.softeng.modello.Persona@{it.unisa.diem.softeng.modello.Persona}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_ac5337261a58febb8e0c26bc1a790bebc} 
+boolean it.\+unisa.\+diem.\+softeng.\+modello.\+Persona.\+equals (\begin{DoxyParamCaption}\item[{Object}]{obj}{}\end{DoxyParamCaption})}
+
+
+
+Confronta questa persona con un altro oggetto. 
+
+Il confronto avviene contemporaneamente secondo il nome e il cognome.
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\texttt{ in}}  & {\em obj} & L\textquotesingle{}oggetto con cui effettuare il confronto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+true se gli oggetti sono uguali, altrimenti false. 
+\end{DoxyReturn}
+
+
+Reimplementata in \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_aa341c28313f9ba11325a077cd68b72d0}{it.\+unisa.\+diem.\+softeng.\+modello.\+Contatto}}.
+
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a4cac0323f302f9ec49990cbe4ab8ed44}\index{it.unisa.diem.softeng.modello.Persona@{it.unisa.diem.softeng.modello.Persona}!getCognome@{getCognome}}
+\index{getCognome@{getCognome}!it.unisa.diem.softeng.modello.Persona@{it.unisa.diem.softeng.modello.Persona}}
+\doxysubsubsection{\texorpdfstring{getCognome()}{getCognome()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a4cac0323f302f9ec49990cbe4ab8ed44} 
+String it.\+unisa.\+diem.\+softeng.\+modello.\+Persona.\+get\+Cognome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ottiene il cognome della persona. 
+
+\begin{DoxyReturn}{Restituisce}
+Il cognome della persona. 
+\end{DoxyReturn}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a7b5a4683b24bfd44d4704bf35680f0fb}\index{it.unisa.diem.softeng.modello.Persona@{it.unisa.diem.softeng.modello.Persona}!getNome@{getNome}}
+\index{getNome@{getNome}!it.unisa.diem.softeng.modello.Persona@{it.unisa.diem.softeng.modello.Persona}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_a7b5a4683b24bfd44d4704bf35680f0fb} 
+String it.\+unisa.\+diem.\+softeng.\+modello.\+Persona.\+get\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ottiene il nome della persona. 
+
+\begin{DoxyReturn}{Restituisce}
+Il nome della persona. 
+\end{DoxyReturn}
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/it/unisa/diem/softeng/modello/Persona.\+java\end{DoxyCompactItemize}

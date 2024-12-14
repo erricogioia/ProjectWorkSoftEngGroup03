@@ -1,0 +1,84 @@
+\doxysection{Riferimenti per la classe it.\+unisa.\+diem.\+softeng.\+persistenza.\+Gestore\+File}
+\hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_gestore_file}{}\label{classit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_gestore_file}\index{it.unisa.diem.softeng.persistenza.GestoreFile@{it.unisa.diem.softeng.persistenza.GestoreFile}}
+
+
+Implementa l\textquotesingle{}interfaccia \doxylink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_interfaccia_gestore_file}{Interfaccia\+Gestore\+File} per il salvataggio e il caricamento della rubrica.  
+
+
+Diagramma delle classi per it.\+unisa.\+diem.\+softeng.\+persistenza.\+Gestore\+File\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_gestore_file}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_gestore_file_a0c04e1e10c51dc663218a2eba5d495c9}{esporta}} (\mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica}{Interfaccia\+Rubrica}} rubrica)  throws IOException 
+\begin{DoxyCompactList}\small\item\em Salva i dati della rubrica su un file.    \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica}{Interfaccia\+Rubrica}} \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_gestore_file_a5856f6f6c11993c4296ecb4d547f61a5}{importa}} ()  throws IOException 
+\begin{DoxyCompactList}\small\item\em Carica i dati di una rubrica da un file.    \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri pubblici ereditati da \mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_interfaccia_gestore_file}{it.\+unisa.\+diem.\+softeng.\+persistenza.\+Interfaccia\+Gestore\+File}}}
+
+
+\doxysubsection{Descrizione dettagliata}
+Implementa l\textquotesingle{}interfaccia \doxylink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_interfaccia_gestore_file}{Interfaccia\+Gestore\+File} per il salvataggio e il caricamento della rubrica. 
+
+\begin{DoxySeeAlso}{Si veda anche}
+\doxylink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_interfaccia_gestore_file}{Interfaccia\+Gestore\+File} 
+
+\doxylink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica}{it.\+unisa.\+diem.\+softeng.\+servizio.\+Interfaccia\+Rubrica} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_gestore_file_a0c04e1e10c51dc663218a2eba5d495c9}\index{it.unisa.diem.softeng.persistenza.GestoreFile@{it.unisa.diem.softeng.persistenza.GestoreFile}!esporta@{esporta}}
+\index{esporta@{esporta}!it.unisa.diem.softeng.persistenza.GestoreFile@{it.unisa.diem.softeng.persistenza.GestoreFile}}
+\doxysubsubsection{\texorpdfstring{esporta()}{esporta()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_gestore_file_a0c04e1e10c51dc663218a2eba5d495c9} 
+void it.\+unisa.\+diem.\+softeng.\+persistenza.\+Gestore\+File.\+esporta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica}{Interfaccia\+Rubrica}}}]{rubrica}{}\end{DoxyParamCaption}) throws IOException}
+
+
+
+Salva i dati della rubrica su un file.    
+
+
+\begin{DoxyParams}[1]{Parametri}
+\mbox{\texttt{ in}}  & {\em rubrica} & La rubrica da salvare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondizione}
+La rubrica non è null. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondizione}
+I dati della rubrica sono salvati sul file specificato tramite il File\+Chooser.    
+\end{DoxyPostcond}
+
+
+Implementa \mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_interfaccia_gestore_file_a6fd1e74950a061e5423d48bfe07d43b1}{it.\+unisa.\+diem.\+softeng.\+persistenza.\+Interfaccia\+Gestore\+File}}.
+
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_gestore_file_a5856f6f6c11993c4296ecb4d547f61a5}\index{it.unisa.diem.softeng.persistenza.GestoreFile@{it.unisa.diem.softeng.persistenza.GestoreFile}!importa@{importa}}
+\index{importa@{importa}!it.unisa.diem.softeng.persistenza.GestoreFile@{it.unisa.diem.softeng.persistenza.GestoreFile}}
+\doxysubsubsection{\texorpdfstring{importa()}{importa()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_gestore_file_a5856f6f6c11993c4296ecb4d547f61a5} 
+\mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica}{Interfaccia\+Rubrica}} it.\+unisa.\+diem.\+softeng.\+persistenza.\+Gestore\+File.\+importa (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws IOException}
+
+
+
+Carica i dati di una rubrica da un file.    
+
+\begin{DoxyPostcond}{Postcondizione}
+La rubrica viene popolata con i dati del file specificato tramite il File\+Chooser. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Restituisce}
+Un\textquotesingle{}istanza di Rubrica contenente i dati caricati.    
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{interfaceit_1_1unisa_1_1diem_1_1softeng_1_1persistenza_1_1_interfaccia_gestore_file_aa2fd00264e6609bf15ae3f4779f5f653}{it.\+unisa.\+diem.\+softeng.\+persistenza.\+Interfaccia\+Gestore\+File}}.
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/it/unisa/diem/softeng/persistenza/Gestore\+File.\+java\end{DoxyCompactItemize}
