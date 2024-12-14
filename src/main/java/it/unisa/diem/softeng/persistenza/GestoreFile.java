@@ -47,7 +47,7 @@ public class GestoreFile implements InterfacciaGestoreFile {
         File f = fc.showOpenDialog(null);
         
         if(f == null)
-            return new Rubrica(new ValidaContatto());
+            return null;
         
         return leggiFile(f);
     }

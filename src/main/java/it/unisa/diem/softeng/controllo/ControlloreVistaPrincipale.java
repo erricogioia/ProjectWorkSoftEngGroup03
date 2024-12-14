@@ -114,7 +114,11 @@ public class ControlloreVistaPrincipale implements Initializable {
      * @see it.unisa.diem.softeng.persistenza::InterfacciaGestoreFile
      */
     public void clickImporta() throws IOException {
-        rubrica = gestoreFile.importa();
+        InterfacciaRubrica ir = gestoreFile.importa();
+        
+        if(ir != null)
+            rubrica = ir;
+        
         aggiornaTabella();
     }
 
