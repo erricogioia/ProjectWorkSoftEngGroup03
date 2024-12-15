@@ -32,7 +32,7 @@ public class GestoreFile implements InterfacciaGestoreFile {
         FileChooser fc = new FileChooser();
         File f = fc.showSaveDialog(null);
         
-         // Se l'utente non seleziona alcun file
+        // L'utente non seleziona alcun file
         if(f == null)
             return;
         
@@ -47,7 +47,7 @@ public class GestoreFile implements InterfacciaGestoreFile {
         FileChooser fc = new FileChooser();
         File f = fc.showOpenDialog(null);
         
-        // Se l'utente non seleziona alcun file
+        // L'utente non seleziona alcun file
         if(f == null)
             return null;
         

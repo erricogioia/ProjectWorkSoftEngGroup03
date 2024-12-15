@@ -80,7 +80,7 @@ public class ControlloreVistaPrincipale implements Initializable {
     @FXML
     public void clickCrea() throws IOException {
         
-        // Carica e mostra la vista del pop-up
+        // Carica e mostra la vista del PopUp
         FXMLLoader loader = new FXMLLoader(getClass().getResource("VistaPopUp.fxml"));
         Parent root = loader.load();
 
@@ -118,8 +118,8 @@ public class ControlloreVistaPrincipale implements Initializable {
     public void clickImporta() throws IOException {
         InterfacciaRubrica ir = gestoreFile.importa();
         
-        // Se nessuna rubrica è stata importata, la rubrica rimane invariata
-        // Altrimenti, la rubrica viene sostituita con quella letta dal file
+        // Se nessuna rubrica è stata importata, la rubrica rimane invariata, altrimenti 
+        // la rubrica viene sostituita con quella letta dal file
         if(ir != null)
             rubrica = ir;
         
@@ -141,19 +141,19 @@ public class ControlloreVistaPrincipale implements Initializable {
     public void modifica(TableColumn.CellEditEvent<Contatto, String> event) {
         Contatto c = tabellaContatti.getSelectionModel().getSelectedItem();
 
-        String newV = event.getNewValue();
+        String nuovoValore = event.getNewValue();
 
         TableColumn<Contatto, String> colonnaModificata = event.getTableColumn();
 
         Contatto nuovo = new Contatto(
-            colonnaModificata == nomeCln ? newV : c.getNome(),
-            colonnaModificata == cognomeCln ? newV : c.getCognome(),
-            colonnaModificata == telefono1Cln ? newV : c.getNumeriTelefono().get(0),
-            colonnaModificata == telefono2Cln ? newV : c.getNumeriTelefono().get(1),
-            colonnaModificata == telefono3Cln ? newV : c.getNumeriTelefono().get(2),
-            colonnaModificata == email1Cln ? newV : c.getEmail().get(0),
-            colonnaModificata == email2Cln ? newV : c.getEmail().get(1),
-            colonnaModificata == email3Cln ? newV : c.getEmail().get(2)
+            colonnaModificata == nomeCln ? nuovoValore : c.getNome(),
+            colonnaModificata == cognomeCln ? nuovoValore : c.getCognome(),
+            colonnaModificata == telefono1Cln ? nuovoValore : c.getNumeriTelefono().get(0),
+            colonnaModificata == telefono2Cln ? nuovoValore : c.getNumeriTelefono().get(1),
+            colonnaModificata == telefono3Cln ? nuovoValore : c.getNumeriTelefono().get(2),
+            colonnaModificata == email1Cln ? nuovoValore : c.getEmail().get(0),
+            colonnaModificata == email2Cln ? nuovoValore : c.getEmail().get(1),
+            colonnaModificata == email3Cln ? nuovoValore : c.getEmail().get(2)
         );
         
         boolean contattoValido = rubrica.modificaContatto(nuovo, (Persona)c);
