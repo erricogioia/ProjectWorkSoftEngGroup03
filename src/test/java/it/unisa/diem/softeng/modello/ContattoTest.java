@@ -51,8 +51,8 @@ import org.junit.jupiter.api.Test;
  * - CE14: obj diverso dall'istanza corrente di Contatto.
  *
  * Boundary Conditions:
- * - CE15: Almeno un NumeroTelefono con una sola cifra
- * - CE16: Almeno una Email con un solo carattere
+ * - BC1: Almeno un NumeroTelefono con una sola cifra
+ * - BC2: Almeno una Email con un solo carattere
  */
 public class ContattoTest {
 
@@ -162,7 +162,7 @@ public class ContattoTest {
     }
 
     /**
-     * Test per valori minimi accettabili. CE15, CE16.
+     * Test per valori minimi accettabili. BC1, BC2.
      */
     @Test
     void testBoundaryMinimi() {

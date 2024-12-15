@@ -31,8 +31,8 @@ import static org.junit.jupiter.api.Assertions.*;
  * Dati non validi: other nullo (null)
  *
  * Boundary Conditions:
- * - CE10: Nome con un solo carattere
- * - CE11: Cognome con un solo carattere
+ * - BC1: Nome con un solo carattere
+ * - BC2: Cognome con un solo carattere
  */
 public class PersonaTest {
 
@@ -160,7 +160,7 @@ public class PersonaTest {
     }
     
     /**
-     * Test per nome di un carattere e cognome normale. CE10.
+     * Test per nome di un carattere e cognome normale. BC1.
      */
     @Test
     public void testBoundaryNomeUnCarattereCognomeNormale() {
@@ -170,7 +170,7 @@ public class PersonaTest {
     }
 
     /**
-     * Test per nome normale e cognome di un carattere. CE11.
+     * Test per nome normale e cognome di un carattere. BC2.
      */
     @Test
     public void testBoundaryNomeNormaleCognomeUnCarattere() {
@@ -180,7 +180,7 @@ public class PersonaTest {
     }
     
     /**
-     * Test per nome e cognome di un carattere. CE10 e CE11.
+     * Test per nome e cognome di un carattere. BC1 e BC2.
      */
     @Test
     public void testBoundaryNomeCognomeUnCarattere() {
