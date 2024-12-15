@@ -93,8 +93,46 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Riferimenti per la classe it.unisa.diem.softeng.modello.ContattoTest</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri.  
+ <a href="#details">Continua...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
-<div class="textblock"><dl class="section author"><dt>Autore</dt><dd>mashalem </dd></dl>
+<div class="textblock"><p>Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri. </p>
+<dl class="section author"><dt>Autore</dt><dd>mashalem </dd></dl>
+<p>Costruttore Contatto(String nome, String cognome, String numeroTelefono1, String numeroTelefono2, String numeroTelefono3, String email1, String email2, String email3)</p>
+<p>Per quanto concerne i parametri del costruttore 'nome' e 'cognome', la suddivisione in classi di equivalenza non viene effettuata poichè risulterebbe ridondante rispetto alla classe <a class="el" href="classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test.html" title="Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri.">PersonaTest</a>.</p>
+<p>NumeroTelefono1:</p><ul>
+<li>CE1: NumeroTelefono1 non vuoto (stringa non vuota)</li>
+<li>CE2: NumeroTelefono1 vuoto (stringa vuota "") Dati non validi: NumeroTelefono1 nullo (null)</li>
+</ul>
+<p>NumeroTelefono2:</p><ul>
+<li>CE3: NumeroTelefono2 non vuoto (stringa non vuota)</li>
+<li>CE4: NumeroTelefono2 vuoto (stringa vuota "") Dati non validi: NumeroTelefono2 nullo (null)</li>
+</ul>
+<p>NumeroTelefono3:</p><ul>
+<li>CE5: NumeroTelefono3 non vuoto (stringa non vuota)</li>
+<li>CE6: NumeroTelefono3 vuoto (stringa vuota "") Dati non validi: NumeroTelefono3 nullo (null)</li>
+</ul>
+<p>Email1:</p><ul>
+<li>CE7: Email1 non vuoto (stringa non vuota)</li>
+<li>CE8: Email1 vuoto (stringa vuota "") Dati non validi: Email1 nullo (null)</li>
+</ul>
+<p>Email2:</p><ul>
+<li>CE9: Email2 non vuoto (stringa non vuota)</li>
+<li>CE10: Email2 vuoto (stringa vuota "") Dati non validi: Email2 nullo (null)</li>
+</ul>
+<p>Email3:</p><ul>
+<li>CE11: Email3 non vuoto (stringa non vuota)</li>
+<li>CE12: Email3 vuoto (stringa vuota "") Dati non validi: Email3 nullo (null)</li>
+</ul>
+<p>Metodo equals</p><ul>
+<li>CE13: obj uguale all'istanza corrente di <a class="el" href="classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto.html" title="Rappresenta un contatto nella rubrica.">Contatto</a>.</li>
+<li>CE14: obj diverso dall'istanza corrente di <a class="el" href="classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto.html" title="Rappresenta un contatto nella rubrica.">Contatto</a>.</li>
+</ul>
+<p>Boundary Conditions:</p><ul>
+<li>BC1: Almeno un NumeroTelefono con una sola cifra</li>
+<li>BC2: Almeno una Email con un solo carattere </li>
+</ul>
 </div><hr/>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
 <li>src/test/java/it/unisa/diem/softeng/modello/<b>ContattoTest.java</b></li>
 </ul>

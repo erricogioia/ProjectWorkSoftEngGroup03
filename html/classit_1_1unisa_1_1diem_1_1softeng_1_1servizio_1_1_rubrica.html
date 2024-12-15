@@ -275,14 +275,15 @@ La rubrica rimane invariata se il metodo restituisce false. </dd></dl>
 <p>Modifica un contatto esistente nella rubrica, qualora la modifica risulti valida.    </p>
 <dl class="params"><dt>Parametri</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">contatto</td><td>Il contatto già modificato. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">contatto</td><td>Il contatto già modificato da aggiungere in rubrica. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>La chiave del contatto precedente da sostituire. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondizione</dt><dd>Il contatto non è null. </dd></dl>
 <dl class="section post"><dt>Postcondizione</dt><dd>Il contatto esistente nella rubrica viene sostituito dal contatto modificato se il metodo restituisce true. </dd>
 <dd>
-Il contatto esistente nella rubrica rimane invariato se il metodo restituisce false. </dd></dl>
+La rubrica rimane invariata se il metodo restituisce false. </dd></dl>
 <dl class="section return"><dt>Restituisce</dt><dd>true se la modifica ha avuto successo, false altrimenti. </dd></dl>
 <dl class="section see"><dt>Si veda anche</dt><dd><a class="el" href="interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_valida_contatto.html" title="Interfaccia per la validazione di un contatto.">InterfacciaValidaContatto</a>    </dd></dl>
 
@@ -313,7 +314,9 @@ Il contatto esistente nella rubrica rimane invariato se il metodo restituisce fa
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondizione</dt><dd>Il contatto non è null. </dd></dl>
-<dl class="section post"><dt>Postcondizione</dt><dd>La rubrica non contiene più il contatto e la dimensione della rubrica viene decrementata di uno.    </dd></dl>
+<dl class="section post"><dt>Postcondizione</dt><dd>La rubrica non contiene più il contatto e la dimensione della rubrica viene decrementata di uno, se il contatto esiste in rubrica. </dd>
+<dd>
+La rubrica rimane invariata se il cotatto non esiste in rubrica.    </dd></dl>
 
 <p>Implementa <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_interfaccia_rubrica.html#aa55549691724246afcb240879bfc6d30">it.unisa.diem.softeng.servizio.InterfacciaRubrica</a>.</p>
 

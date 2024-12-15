@@ -1,5 +1,10 @@
 \doxysection{Riferimenti per la classe it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test}
 \hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test}{}\label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
+
+
+Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri.  
+
+
 \doxysubsubsection*{Membri pubblici}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,9 +32,13 @@ void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona
 \item 
 void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_ac3d29e8ba898638dd18d480743c767e0}{test\+Compare\+To\+Per\+Nome}} ()
 \item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_acaba413e685f42aae4917d730b87f538}{test\+Compare\+To\+Null}} ()
+\item 
 void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aed57a42435e5937663b651c543cc7ed4}{test\+Boundary\+Nome\+Un\+Carattere\+Cognome\+Normale}} ()
 \item 
 void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aa56345ee9912d12dd4635d7253628950}{test\+Boundary\+Nome\+Normale\+Cognome\+Un\+Carattere}} ()
+\item 
+void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a263fe52dcc91cdc0e797744b771558ad}{test\+Boundary\+Nome\+Cognome\+Un\+Carattere}} ()
 \item 
 void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a358c52801cdc2e8895032556a067c0ef}{test\+Boundary\+Nome\+Lungo\+Cognome\+Normale}} ()
 \item 
@@ -38,109 +47,148 @@ void \mbox{\hyperlink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona
 
 
 \doxysubsection{Descrizione dettagliata}
+Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri. 
+
 \begin{DoxyAuthor}{Autore}
 antoniopiodamico 
 \end{DoxyAuthor}
+Costruttore Persona(\+String nome, String cognome) Nome\+:
+\begin{DoxyItemize}
+\item CE1\+: Nome non vuoto (stringa non vuota)
+\item CE2\+: Nome vuoto (stringa vuota "{}"{}) Dati non validi\+: Nome nullo (null) Cognome\+:
+\item CE3\+: Cognome non vuoto (stringa non vuota)
+\item CE4\+: Cognome vuoto (stringa vuota "{}"{}) Dati non validi\+: Cognome nullo (null)
+\end{DoxyItemize}
 
+Metodo equals
+\begin{DoxyItemize}
+\item CE5\+: obj uguale all\textquotesingle{}istanza corrente di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}.
+\item CE6\+: obj diverso dall\textquotesingle{}istanza corrente di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}.
+\end{DoxyItemize}
+
+Metodo compare\+To
+\begin{DoxyItemize}
+\item CE7\+: other minore dell\textquotesingle{}istanza corrente di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}
+\item CE8\+: other maggiore dell\textquotesingle{}istanza corrente di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona}
+\item CE9\+: other uguale all\textquotesingle{}istanza corrente di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona}{Persona} Dati non validi\+: other nullo (null)
+\end{DoxyItemize}
+
+Boundary Conditions\+:
+\begin{DoxyItemize}
+\item BC1\+: Nome con un solo carattere
+\item BC2\+: Cognome con un solo carattere 
+\end{DoxyItemize}
 
 \doxysubsection{Documentazione delle funzioni membro}
-\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a358c52801cdc2e8895032556a067c0ef}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testBoundaryNomeLungoCognomeNormale@{testBoundaryNomeLungoCognomeNormale}}
+\Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a263fe52dcc91cdc0e797744b771558ad}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testBoundaryNomeCognomeUnCarattere@{testBoundaryNomeCognomeUnCarattere}}
+\index{testBoundaryNomeCognomeUnCarattere@{testBoundaryNomeCognomeUnCarattere}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
+\doxysubsubsection{\texorpdfstring{testBoundaryNomeCognomeUnCarattere()}{testBoundaryNomeCognomeUnCarattere()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a263fe52dcc91cdc0e797744b771558ad} 
+void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Boundary\+Nome\+Cognome\+Un\+Carattere (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Test per nome e cognome di un carattere. BC1 e BC2. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a358c52801cdc2e8895032556a067c0ef}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testBoundaryNomeLungoCognomeNormale@{testBoundaryNomeLungoCognomeNormale}}
 \index{testBoundaryNomeLungoCognomeNormale@{testBoundaryNomeLungoCognomeNormale}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testBoundaryNomeLungoCognomeNormale()}{testBoundaryNomeLungoCognomeNormale()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a358c52801cdc2e8895032556a067c0ef} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Boundary\+Nome\+Lungo\+Cognome\+Normale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test per nome lungo e cognome normale. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a0dfac5214817fd0e7b36e3d32cad05c6}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testBoundaryNomeNormaleCognomeLungo@{testBoundaryNomeNormaleCognomeLungo}}
+Test per nome lungo e cognome normale. CE1 e CE3. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a0dfac5214817fd0e7b36e3d32cad05c6}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testBoundaryNomeNormaleCognomeLungo@{testBoundaryNomeNormaleCognomeLungo}}
 \index{testBoundaryNomeNormaleCognomeLungo@{testBoundaryNomeNormaleCognomeLungo}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testBoundaryNomeNormaleCognomeLungo()}{testBoundaryNomeNormaleCognomeLungo()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a0dfac5214817fd0e7b36e3d32cad05c6} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Boundary\+Nome\+Normale\+Cognome\+Lungo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test per nome normale e cognome lungo. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aa56345ee9912d12dd4635d7253628950}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testBoundaryNomeNormaleCognomeUnCarattere@{testBoundaryNomeNormaleCognomeUnCarattere}}
+Test per nome normale e cognome lungo. CE1 e CE3. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aa56345ee9912d12dd4635d7253628950}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testBoundaryNomeNormaleCognomeUnCarattere@{testBoundaryNomeNormaleCognomeUnCarattere}}
 \index{testBoundaryNomeNormaleCognomeUnCarattere@{testBoundaryNomeNormaleCognomeUnCarattere}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testBoundaryNomeNormaleCognomeUnCarattere()}{testBoundaryNomeNormaleCognomeUnCarattere()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aa56345ee9912d12dd4635d7253628950} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Boundary\+Nome\+Normale\+Cognome\+Un\+Carattere (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test per nome normale e cognome di un carattere. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aed57a42435e5937663b651c543cc7ed4}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testBoundaryNomeUnCarattereCognomeNormale@{testBoundaryNomeUnCarattereCognomeNormale}}
+Test per nome normale e cognome di un carattere. BC2. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aed57a42435e5937663b651c543cc7ed4}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testBoundaryNomeUnCarattereCognomeNormale@{testBoundaryNomeUnCarattereCognomeNormale}}
 \index{testBoundaryNomeUnCarattereCognomeNormale@{testBoundaryNomeUnCarattereCognomeNormale}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testBoundaryNomeUnCarattereCognomeNormale()}{testBoundaryNomeUnCarattereCognomeNormale()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aed57a42435e5937663b651c543cc7ed4} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Boundary\+Nome\+Un\+Carattere\+Cognome\+Normale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test per nome di un carattere e cognome normale. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a84ad4b617dd84623075ff321737f6cc3}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCompareToOggettiUguali@{testCompareToOggettiUguali}}
+Test per nome di un carattere e cognome normale. BC1. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_acaba413e685f42aae4917d730b87f538}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCompareToNull@{testCompareToNull}}
+\index{testCompareToNull@{testCompareToNull}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
+\doxysubsubsection{\texorpdfstring{testCompareToNull()}{testCompareToNull()}}
+{\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_acaba413e685f42aae4917d730b87f538} 
+void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Compare\+To\+Null (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Test del metodo compare\+To con parametro null. Dato non valido. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a84ad4b617dd84623075ff321737f6cc3}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCompareToOggettiUguali@{testCompareToOggettiUguali}}
 \index{testCompareToOggettiUguali@{testCompareToOggettiUguali}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testCompareToOggettiUguali()}{testCompareToOggettiUguali()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a84ad4b617dd84623075ff321737f6cc3} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Compare\+To\+Oggetti\+Uguali (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test del metodo compare\+To per oggetti uguali. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aea8c9cd2679996dbcf347d58af73dcb3}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCompareToPerCognome@{testCompareToPerCognome}}
+Test del metodo compare\+To per oggetti uguali. CE9. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aea8c9cd2679996dbcf347d58af73dcb3}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCompareToPerCognome@{testCompareToPerCognome}}
 \index{testCompareToPerCognome@{testCompareToPerCognome}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testCompareToPerCognome()}{testCompareToPerCognome()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aea8c9cd2679996dbcf347d58af73dcb3} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Compare\+To\+Per\+Cognome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test del metodo compare\+To per ordine alfabetico del cognome. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_ac3d29e8ba898638dd18d480743c767e0}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCompareToPerNome@{testCompareToPerNome}}
+Test del metodo compare\+To per ordine alfabetico del cognome. CE8. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_ac3d29e8ba898638dd18d480743c767e0}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCompareToPerNome@{testCompareToPerNome}}
 \index{testCompareToPerNome@{testCompareToPerNome}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testCompareToPerNome()}{testCompareToPerNome()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_ac3d29e8ba898638dd18d480743c767e0} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Compare\+To\+Per\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test del metodo compare\+To per ordine alfabetico del nome. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_ae9e128fec45ab873b2d7a47f1c4d2a1a}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConCognomeNull@{testCreazioneOggettoConCognomeNull}}
+Test del metodo compare\+To per ordine alfabetico del nome. CE7. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_ae9e128fec45ab873b2d7a47f1c4d2a1a}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConCognomeNull@{testCreazioneOggettoConCognomeNull}}
 \index{testCreazioneOggettoConCognomeNull@{testCreazioneOggettoConCognomeNull}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testCreazioneOggettoConCognomeNull()}{testCreazioneOggettoConCognomeNull()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_ae9e128fec45ab873b2d7a47f1c4d2a1a} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Creazione\+Oggetto\+Con\+Cognome\+Null (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test per cognome null. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a7f867d6b539924235da2b02f53d3962d}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConCognomeVuoto@{testCreazioneOggettoConCognomeVuoto}}
+Test per cognome null. Dato non valido. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a7f867d6b539924235da2b02f53d3962d}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConCognomeVuoto@{testCreazioneOggettoConCognomeVuoto}}
 \index{testCreazioneOggettoConCognomeVuoto@{testCreazioneOggettoConCognomeVuoto}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testCreazioneOggettoConCognomeVuoto()}{testCreazioneOggettoConCognomeVuoto()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a7f867d6b539924235da2b02f53d3962d} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Creazione\+Oggetto\+Con\+Cognome\+Vuoto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test per cognome vuoto. Boundary\+Test2. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a5d64820dbb83f7f9b4e8388d46232fc7}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConEntrambiNull@{testCreazioneOggettoConEntrambiNull}}
+Test per cognome vuoto. CE1 e CE4. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a5d64820dbb83f7f9b4e8388d46232fc7}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConEntrambiNull@{testCreazioneOggettoConEntrambiNull}}
 \index{testCreazioneOggettoConEntrambiNull@{testCreazioneOggettoConEntrambiNull}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testCreazioneOggettoConEntrambiNull()}{testCreazioneOggettoConEntrambiNull()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a5d64820dbb83f7f9b4e8388d46232fc7} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Creazione\+Oggetto\+Con\+Entrambi\+Null (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test per entrambi null. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a58533343f639a4424e8c2cc2ae1db2b4}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConEntrambiVuoti@{testCreazioneOggettoConEntrambiVuoti}}
+Test per entrambi null. Dato non valido. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a58533343f639a4424e8c2cc2ae1db2b4}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConEntrambiVuoti@{testCreazioneOggettoConEntrambiVuoti}}
 \index{testCreazioneOggettoConEntrambiVuoti@{testCreazioneOggettoConEntrambiVuoti}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testCreazioneOggettoConEntrambiVuoti()}{testCreazioneOggettoConEntrambiVuoti()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a58533343f639a4424e8c2cc2ae1db2b4} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Creazione\+Oggetto\+Con\+Entrambi\+Vuoti (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test per entrambi vuoti. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a444c45f02949f40e2cc2ea494ea80b6c}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConNomeECognome@{testCreazioneOggettoConNomeECognome}}
+Test per entrambi vuoti. CE2 e CE4. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a444c45f02949f40e2cc2ea494ea80b6c}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConNomeECognome@{testCreazioneOggettoConNomeECognome}}
 \index{testCreazioneOggettoConNomeECognome@{testCreazioneOggettoConNomeECognome}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testCreazioneOggettoConNomeECognome()}{testCreazioneOggettoConNomeECognome()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a444c45f02949f40e2cc2ea494ea80b6c} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Creazione\+Oggetto\+Con\+Nome\+ECognome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test per nome e cognome non vuoti. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a781129712b7cd8b9547efd01dd582a75}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConNomeNull@{testCreazioneOggettoConNomeNull}}
+Test per nome e cognome non vuoti. CE1 e CE3. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a781129712b7cd8b9547efd01dd582a75}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConNomeNull@{testCreazioneOggettoConNomeNull}}
 \index{testCreazioneOggettoConNomeNull@{testCreazioneOggettoConNomeNull}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testCreazioneOggettoConNomeNull()}{testCreazioneOggettoConNomeNull()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a781129712b7cd8b9547efd01dd582a75} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Creazione\+Oggetto\+Con\+Nome\+Null (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test per nome null. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aa0f9d2c93ced4ad983064b72c12f3021}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConNomeVuoto@{testCreazioneOggettoConNomeVuoto}}
+Test per nome null. Dato non valido. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aa0f9d2c93ced4ad983064b72c12f3021}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testCreazioneOggettoConNomeVuoto@{testCreazioneOggettoConNomeVuoto}}
 \index{testCreazioneOggettoConNomeVuoto@{testCreazioneOggettoConNomeVuoto}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testCreazioneOggettoConNomeVuoto()}{testCreazioneOggettoConNomeVuoto()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_aa0f9d2c93ced4ad983064b72c12f3021} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Creazione\+Oggetto\+Con\+Nome\+Vuoto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test per nome vuoto. Boundary\+Test1. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a0c3d6f9d3845e4e16b063d22a1a0ac17}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testEqualsOggettiDiversi@{testEqualsOggettiDiversi}}
+Test per nome vuoto. CE2 e CE3. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a0c3d6f9d3845e4e16b063d22a1a0ac17}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testEqualsOggettiDiversi@{testEqualsOggettiDiversi}}
 \index{testEqualsOggettiDiversi@{testEqualsOggettiDiversi}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testEqualsOggettiDiversi()}{testEqualsOggettiDiversi()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_a0c3d6f9d3845e4e16b063d22a1a0ac17} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Equals\+Oggetti\+Diversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test del metodo equals per oggetti diversi. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_ac9a261383781865ed6bd82ea487279b3}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testEqualsOggettiUguali@{testEqualsOggettiUguali}}
+Test del metodo equals per oggetti diversi. CE6. \Hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_ac9a261383781865ed6bd82ea487279b3}\index{it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}!testEqualsOggettiUguali@{testEqualsOggettiUguali}}
 \index{testEqualsOggettiUguali@{testEqualsOggettiUguali}!it.unisa.diem.softeng.modello.PersonaTest@{it.unisa.diem.softeng.modello.PersonaTest}}
 \doxysubsubsection{\texorpdfstring{testEqualsOggettiUguali()}{testEqualsOggettiUguali()}}
 {\footnotesize\ttfamily \label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test_ac9a261383781865ed6bd82ea487279b3} 
 void it.\+unisa.\+diem.\+softeng.\+modello.\+Persona\+Test.\+test\+Equals\+Oggetti\+Uguali (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Test del metodo equals per oggetti uguali. 
+Test del metodo equals per oggetti uguali. CE5. 
 
 La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
 \item 

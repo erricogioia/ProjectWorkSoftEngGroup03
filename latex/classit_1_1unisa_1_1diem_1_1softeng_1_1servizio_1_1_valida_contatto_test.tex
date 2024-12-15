@@ -2,11 +2,26 @@
 \hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_valida_contatto_test}{}\label{classit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_valida_contatto_test}\index{it.unisa.diem.softeng.servizio.ValidaContattoTest@{it.unisa.diem.softeng.servizio.ValidaContattoTest}}
 
 
-\doxysubsection{Descrizione dettagliata}
-\begin{DoxyAuthor}{Autore}
-raffaele 
-\end{DoxyAuthor}
+Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri.  
 
+
+
+
+\doxysubsection{Descrizione dettagliata}
+Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri. 
+
+Metodo valida(\+Contatto contatto) contatto\+:
+\begin{DoxyItemize}
+\item CE1\+: contatto valido\+: almeno uno tra nome e cognome non vuoto e numero\+Telefono/e-\/mail che soddisfano i criteri di validità
+\item CE2\+: contatto non valido Dati non validi\+: contatto nullo (null)
+\end{DoxyItemize}
+
+Boundary Conditions\+:
+\begin{DoxyItemize}
+\item BC1\+: Numero di cifre del telefono superiore di uno rispetto al formato valido
+\item BC2\+: Numero di cifre del telefono inferiore di uno rispetto al formato valido
+\item BC3\+: E-\/mail che non rispetta per un parametro il pattern di validità 
+\end{DoxyItemize}
 
 La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
 \item 

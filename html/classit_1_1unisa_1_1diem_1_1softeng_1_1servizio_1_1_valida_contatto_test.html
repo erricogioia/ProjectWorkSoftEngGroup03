@@ -93,8 +93,20 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Riferimenti per la classe it.unisa.diem.softeng.servizio.ValidaContattoTest</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri.  
+ <a href="#details">Continua...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
-<div class="textblock"><dl class="section author"><dt>Autore</dt><dd>raffaele </dd></dl>
+<div class="textblock"><p>Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri. </p>
+<p>Metodo valida(Contatto contatto) contatto:</p><ul>
+<li>CE1: contatto valido: almeno uno tra nome e cognome non vuoto e numeroTelefono/e-mail che soddisfano i criteri di validità</li>
+<li>CE2: contatto non valido Dati non validi: contatto nullo (null)</li>
+</ul>
+<p>Boundary Conditions:</p><ul>
+<li>BC1: Numero di cifre del telefono superiore di uno rispetto al formato valido</li>
+<li>BC2: Numero di cifre del telefono inferiore di uno rispetto al formato valido</li>
+<li>BC3: E-mail che non rispetta per un parametro il pattern di validità </li>
+</ul>
 </div><hr/>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
 <li>src/test/java/it/unisa/diem/softeng/servizio/<b>ValidaContattoTest.java</b></li>
 </ul>

@@ -2,11 +2,51 @@
 \hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_rubrica_test}{}\label{classit_1_1unisa_1_1diem_1_1softeng_1_1servizio_1_1_rubrica_test}\index{it.unisa.diem.softeng.servizio.RubricaTest@{it.unisa.diem.softeng.servizio.RubricaTest}}
 
 
+Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri.  
+
+
+
+
 \doxysubsection{Descrizione dettagliata}
+Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri. 
+
 \begin{DoxyAuthor}{Autore}
 erricogioia 
 \end{DoxyAuthor}
+Costruttore Rubrica(\+Interfaccia\+Valida\+Contatto valida)
+\begin{DoxyItemize}
+\item CE1\+: Valida non nullo (null). Dati non validi\+: Valida nullo (null).
+\end{DoxyItemize}
 
+Metodo crea\+Contatto
+\begin{DoxyItemize}
+\item CE2\+: contatto valido.
+\item CE3\+: contatto non valido. Dati non validi\+: contatto nullo (null).
+\end{DoxyItemize}
+
+Metodo rimuovi\+Contatto
+\begin{DoxyItemize}
+\item CE4\+: contatto esistente in rubrica.
+\item CE5\+: contatto non esistente in rubrica. Dati non validi\+: contatto nullo (null)
+\end{DoxyItemize}
+
+Metodo modifica\+Contatto Contatto\+:
+\begin{DoxyItemize}
+\item CE6\+: contatto valido.
+\item CE7\+: contatto non valido. Dati non validi\+: contatto nullo (null).
+\end{DoxyItemize}
+
+Key\+:
+\begin{DoxyItemize}
+\item CE8\+: chiave di un contatto esistente.
+\item CE9\+: chiave di un contatto non esistente. Dati non validi\+: chiave nulla (null).
+\end{DoxyItemize}
+
+Metodo cerca\+Contatto
+\begin{DoxyItemize}
+\item CE10\+: stringa vuota.
+\item CE11\+: stringa non vuota. Dati non validi\+: stringa nulla (null). 
+\end{DoxyItemize}
 
 La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
 \item 

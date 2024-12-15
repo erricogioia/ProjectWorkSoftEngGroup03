@@ -93,8 +93,35 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Riferimenti per la classe it.unisa.diem.softeng.servizio.RubricaTest</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri.  
+ <a href="#details">Continua...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
-<div class="textblock"><dl class="section author"><dt>Autore</dt><dd>erricogioia </dd></dl>
+<div class="textblock"><p>Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri. </p>
+<dl class="section author"><dt>Autore</dt><dd>erricogioia </dd></dl>
+<p>Costruttore Rubrica(InterfacciaValidaContatto valida)</p><ul>
+<li>CE1: Valida non nullo (null). Dati non validi: Valida nullo (null).</li>
+</ul>
+<p>Metodo creaContatto</p><ul>
+<li>CE2: contatto valido.</li>
+<li>CE3: contatto non valido. Dati non validi: contatto nullo (null).</li>
+</ul>
+<p>Metodo rimuoviContatto</p><ul>
+<li>CE4: contatto esistente in rubrica.</li>
+<li>CE5: contatto non esistente in rubrica. Dati non validi: contatto nullo (null)</li>
+</ul>
+<p>Metodo modificaContatto Contatto:</p><ul>
+<li>CE6: contatto valido.</li>
+<li>CE7: contatto non valido. Dati non validi: contatto nullo (null).</li>
+</ul>
+<p>Key:</p><ul>
+<li>CE8: chiave di un contatto esistente.</li>
+<li>CE9: chiave di un contatto non esistente. Dati non validi: chiave nulla (null).</li>
+</ul>
+<p>Metodo cercaContatto</p><ul>
+<li>CE10: stringa vuota.</li>
+<li>CE11: stringa non vuota. Dati non validi: stringa nulla (null). </li>
+</ul>
 </div><hr/>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
 <li>src/test/java/it/unisa/diem/softeng/servizio/<b>RubricaTest.java</b></li>
 </ul>

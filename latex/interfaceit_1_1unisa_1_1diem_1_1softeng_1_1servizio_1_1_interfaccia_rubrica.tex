@@ -130,7 +130,9 @@ Modifica un contatto esistente nella rubrica, qualora la modifica risulti valida
 
 
 \begin{DoxyParams}[1]{Parametri}
-\mbox{\texttt{ in}}  & {\em contatto} & Il contatto già modificato. \\
+\mbox{\texttt{ in}}  & {\em contatto} & Il contatto già modificato da aggiungere in rubrica. \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & La chiave del contatto precedente da sostituire. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyPrecond}{Precondizione}
@@ -139,7 +141,7 @@ Il contatto non è null.
 \begin{DoxyPostcond}{Postcondizione}
 Il contatto esistente nella rubrica viene sostituito dal contatto modificato se il metodo restituisce true. 
 
-Il contatto esistente nella rubrica rimane invariato se il metodo restituisce false. 
+La rubrica rimane invariata se il metodo restituisce false. 
 \end{DoxyPostcond}
 \begin{DoxyReturn}{Restituisce}
 true se la modifica ha avuto successo, false altrimenti. 
@@ -170,7 +172,9 @@ Rimuove dalla rubrica il contatto passatogli.
 Il contatto non è null. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondizione}
-La rubrica non contiene più il contatto e la dimensione della rubrica viene decrementata di uno. 
+La rubrica non contiene più il contatto e la dimensione della rubrica viene decrementata di uno, se il contatto esiste in rubrica. 
+
+La rubrica rimane invariata se il cotatto non esiste in rubrica. 
 \end{DoxyPostcond}
 
 

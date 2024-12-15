@@ -2,11 +2,68 @@
 \hypertarget{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_test}{}\label{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto_test}\index{it.unisa.diem.softeng.modello.ContattoTest@{it.unisa.diem.softeng.modello.ContattoTest}}
 
 
+Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri.  
+
+
+
+
 \doxysubsection{Descrizione dettagliata}
+Le classi di equivalenza per i metodi di test verranno raggruppate secondo i seguenti criteri. 
+
 \begin{DoxyAuthor}{Autore}
 mashalem 
 \end{DoxyAuthor}
+Costruttore Contatto(\+String nome, String cognome, String numero\+Telefono1, String numero\+Telefono2, String numero\+Telefono3, String email1, String email2, String email3)
 
+Per quanto concerne i parametri del costruttore \textquotesingle{}nome\textquotesingle{} e \textquotesingle{}cognome\textquotesingle{}, la suddivisione in classi di equivalenza non viene effettuata poichè risulterebbe ridondante rispetto alla classe \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_persona_test}{Persona\+Test}.
+
+Numero\+Telefono1\+:
+\begin{DoxyItemize}
+\item CE1\+: Numero\+Telefono1 non vuoto (stringa non vuota)
+\item CE2\+: Numero\+Telefono1 vuoto (stringa vuota "{}"{}) Dati non validi\+: Numero\+Telefono1 nullo (null)
+\end{DoxyItemize}
+
+Numero\+Telefono2\+:
+\begin{DoxyItemize}
+\item CE3\+: Numero\+Telefono2 non vuoto (stringa non vuota)
+\item CE4\+: Numero\+Telefono2 vuoto (stringa vuota "{}"{}) Dati non validi\+: Numero\+Telefono2 nullo (null)
+\end{DoxyItemize}
+
+Numero\+Telefono3\+:
+\begin{DoxyItemize}
+\item CE5\+: Numero\+Telefono3 non vuoto (stringa non vuota)
+\item CE6\+: Numero\+Telefono3 vuoto (stringa vuota "{}"{}) Dati non validi\+: Numero\+Telefono3 nullo (null)
+\end{DoxyItemize}
+
+Email1\+:
+\begin{DoxyItemize}
+\item CE7\+: Email1 non vuoto (stringa non vuota)
+\item CE8\+: Email1 vuoto (stringa vuota "{}"{}) Dati non validi\+: Email1 nullo (null)
+\end{DoxyItemize}
+
+Email2\+:
+\begin{DoxyItemize}
+\item CE9\+: Email2 non vuoto (stringa non vuota)
+\item CE10\+: Email2 vuoto (stringa vuota "{}"{}) Dati non validi\+: Email2 nullo (null)
+\end{DoxyItemize}
+
+Email3\+:
+\begin{DoxyItemize}
+\item CE11\+: Email3 non vuoto (stringa non vuota)
+\item CE12\+: Email3 vuoto (stringa vuota "{}"{}) Dati non validi\+: Email3 nullo (null)
+\end{DoxyItemize}
+
+Metodo equals
+\begin{DoxyItemize}
+\item CE13\+: obj uguale all\textquotesingle{}istanza corrente di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}.
+\item CE14\+: obj diverso dall\textquotesingle{}istanza corrente di \doxylink{classit_1_1unisa_1_1diem_1_1softeng_1_1modello_1_1_contatto}{Contatto}.
+\end{DoxyItemize}
+
+Boundary Conditions\+:
+\begin{DoxyItemize}
+\item BC1\+: Almeno un Numero\+Telefono con una sola cifra
+\item BC2\+: Almeno una Email con un solo carattere 
+\end{DoxyItemize}
 
 La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
 \item 
