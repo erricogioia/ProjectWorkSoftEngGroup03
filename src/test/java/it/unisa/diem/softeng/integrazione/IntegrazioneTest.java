@@ -45,5 +45,29 @@ public class IntegrazioneTest {
         Map<Persona, Contatto> risultatiRicerca = rubrica.cercaContatto("Mario");
         assertEquals(1, risultatiRicerca.size());
         assertTrue(risultatiRicerca.containsKey((Persona)contatto1));
+        
+        // Ricerca di un contatto inesistente
+        risultatiRicerca = rubrica.cercaContatto("Pippo");
+        assertTrue(risultatiRicerca.isEmpty());
+
+        // Modifica di un contatto esistente
+        Contatto contattoModificato = new Contatto("Mario", "Rossi", "1111111111", "", "", "mario.rossi@newmail.com", "", "");
+        assertTrue(rubrica.modificaContatto(contattoModificato, (Persona)contatto1));
+
+        // Controllo della modifica
+        risultatiRicerca = rubrica.cercaContatto("Mario");
+        assertEquals(1, risultatiRicerca.size());
+        Contatto contattoMod = risultatiRicerca.get((Persona)contattoModificato);
+        assertNotNull(contattoMod);
+        assertEquals("1111111111", contattoMod.getNumeriTelefono().get(0));
+
+        // Rimozione di un contatto
+        rubrica.rimuoviContatto(contatto2);
+        risultatiRicerca = rubrica.cercaContatto("Luigi");
+        assertTrue(risultatiRicerca.isEmpty());
+
+        // Verifica sulla rubrica finale 
+        Map<Persona, Contatto> contattiFinali = rubrica.getContatti();
+        assertEquals(1, contattiFinali.size());
     }
 }
