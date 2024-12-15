@@ -35,7 +35,8 @@ public interface InterfacciaRubrica {
      * @brief Rimuove dalla rubrica il contatto passatogli.
      * @param[in] contatto Il contatto da rimuovere.
      * @pre Il contatto non è null.
-     * @post La rubrica non contiene più il contatto e la dimensione della rubrica viene decrementata di uno.
+     * @post La rubrica non contiene più il contatto e la dimensione della rubrica viene decrementata di uno, se il contatto esiste in rubrica.
+     * @post La rubrica rimane invariata se il cotatto non esiste in rubrica.
     */
     void rimuoviContatto(Contatto contatto);
 
@@ -45,7 +46,7 @@ public interface InterfacciaRubrica {
      * @param[in] key La chiave del contatto precedente da sostituire.
      * @pre Il contatto non è null.
      * @post Il contatto esistente nella rubrica viene sostituito dal contatto modificato se il metodo restituisce true. 
-     * @post Il contatto esistente nella rubrica rimane invariato se il metodo restituisce false. 
+     * @post La rubrica rimane invariata se il metodo restituisce false. 
      * @return true se la modifica ha avuto successo, false altrimenti.
      * @see InterfacciaValidaContatto
     */

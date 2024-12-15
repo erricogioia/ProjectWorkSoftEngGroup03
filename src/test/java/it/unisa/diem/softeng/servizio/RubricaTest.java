@@ -123,6 +123,7 @@ public class RubricaTest {
         Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "1234567890", "1234567890", "a@example.com", "b@example.com", "c@example.com");
         rubrica.rimuoviContatto(c1);
         assertFalse(rubrica.getContatti().containsValue(c1));
+        assertTrue(rubrica.getContatti().isEmpty());
     }
 
     /**
@@ -137,7 +138,7 @@ public class RubricaTest {
      * Test del metodo modificaContatto con contatto valido e chiave esistente. CE6 e CE8.
      */
     @Test
-    void testModificaContattoEsistente1() {
+    void testModificaContattoEsistente() {
         Contatto c1 = new Contatto("Mario", "Rossi", "1234567890", "1234567890", "1234567890", "a@example.com", "b@example.com", "c@example.com");
         Persona k1 = (Persona) c1;
         rubrica.creaContatto(c1);
@@ -157,6 +158,7 @@ public class RubricaTest {
         Contatto c1Modificato = new Contatto("Mario", "Rossi", "1234567890", "", "", "x@example.com", "y@example.com", "z@example.com");
         assertFalse(rubrica.modificaContatto(c1Modificato, k1));
         assertFalse(rubrica.getContatti().containsValue(c1Modificato));
+        assertFalse(rubrica.getContatti().containsValue(c1));
     }
     
     /**
@@ -185,6 +187,7 @@ public class RubricaTest {
         Contatto c1Modificato = new Contatto("Mario", "Rossi", "1234567890", "1234567890", "1234567890", "a", "b", "c");
         assertFalse(rubrica.modificaContatto(c1Modificato, k1));
         assertFalse(rubrica.getContatti().containsValue(c1Modificato));
+        assertFalse(rubrica.getContatti().containsValue(c1));
     }
     
     /**
@@ -209,7 +212,7 @@ public class RubricaTest {
      * Test del metodo modificaContatto con contatto nullo e chiave nulla. Dati non validi.
      */
     @Test
-    void testModificaContattoeChiaveNull() {
+    void testModificaContattoEChiaveNull() {
         assertThrows(IllegalArgumentException.class, () -> { rubrica.modificaContatto(null, null); });
     }
 
@@ -226,6 +229,9 @@ public class RubricaTest {
         assertEquals(2, risultati.size());
         assertTrue(risultati.containsValue(c1));
         assertTrue(risultati.containsValue(c2));
+        assertTrue(rubrica.getContatti().containsValue(c1));
+        assertTrue(rubrica.getContatti().containsValue(c2));
+        assertEquals(2, rubrica.getContatti().size());
     }
 
     /**
@@ -238,6 +244,8 @@ public class RubricaTest {
         Map<Persona, Contatto> risultati = rubrica.cercaContatto("mar");
         assertEquals(1, risultati.size());
         assertTrue(risultati.containsValue(c1));
+        assertTrue(rubrica.getContatti().containsValue(c1));
+        assertEquals(1, rubrica.getContatti().size());
     }
 
     /**

@@ -52,6 +52,8 @@ public class Rubrica implements InterfacciaRubrica{
                 
         if(contattoValido){
             Contatto c = this.contatti.putIfAbsent((Persona)contatto, contatto);
+            
+            // Se il contatto già esisteva
             if(c != null)
                 return false;
         }
@@ -80,9 +82,11 @@ public class Rubrica implements InterfacciaRubrica{
         
         boolean contattoValido = this.controlloContatto(contatto);
         
+        // Se il contatto modificato che si desidera aggiungere è già presente nella rubrica
         if(this.contatti.containsKey((Persona)contatto) && this.contatti.containsValue(contatto))
             return false;                  
         
+        // Se il contatto è valido e la chiave del vecchio contatto è presente in rubrica
         if(contattoValido && this.contatti.containsKey(key)) {
             this.contatti.remove(key);
             this.contatti.put((Persona)contatto, contatto);
@@ -103,13 +107,17 @@ public class Rubrica implements InterfacciaRubrica{
         Map<Persona, Contatto> m = new TreeMap<>();
         
         for(Contatto c : contatti.values()){
+            // Se il nome oppure il cognome inizia con la stringa 'str'
             if(c.getNome().toUpperCase().startsWith(str.toUpperCase()) || c.getCognome().toUpperCase().startsWith(str.toUpperCase()))
                 m.put((Persona)c, c);
             else {
+                
+                // Se uno tra i numeri di telefono inizia con la stringa 'str'
                 for(String s1 : c.getNumeriTelefono())
                     if(s1.startsWith(str))
                         m.putIfAbsent((Persona)c, c);
                 
+                // Se una tra le e-mail inizia con la stringa 'str'
                 for(String s2 : c.getEmail())
                     if(s2.startsWith(str))
                         m.putIfAbsent((Persona)c, c);

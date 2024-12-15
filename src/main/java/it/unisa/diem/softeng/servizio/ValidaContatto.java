@@ -22,6 +22,7 @@ public class ValidaContatto implements InterfacciaValidaContatto  {
         if(contatto.getNome().equals("") && contatto.getCognome().equals(""))
             return false;
         
+        // Verifica se i numeri di telefono hanno dieci cifre e sono esclusivamente numeri
         if(!contatto.getNumeriTelefono().isEmpty())
             for(String s : contatto.getNumeriTelefono()) {
                 if(!s.isEmpty() && s.length() != lunghezzaNumero)
@@ -31,9 +32,12 @@ public class ValidaContatto implements InterfacciaValidaContatto  {
                         return false;
             }
         
+        // Primo pattern: nome utente senza '.'
         String pattern1 = "^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+$";
+        // Secondo pattern: nome utente con '.'
         String pattern2 = "^[a-zA-Z0-9]+\\.[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+$";
         
+        // Verifica se le e-mail verificano uno tra i pattern proposti
         if(!contatto.getEmail().isEmpty())
             for(String s : contatto.getEmail())
                 if (!s.isEmpty() && !s.matches(pattern1) && !s.matches(pattern2))

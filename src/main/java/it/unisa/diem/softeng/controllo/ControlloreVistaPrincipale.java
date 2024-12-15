@@ -79,6 +79,8 @@ public class ControlloreVistaPrincipale implements Initializable {
     */
     @FXML
     public void clickCrea() throws IOException {
+        
+        // Carica e mostra la vista del pop-up
         FXMLLoader loader = new FXMLLoader(getClass().getResource("VistaPopUp.fxml"));
         Parent root = loader.load();
 
@@ -116,6 +118,8 @@ public class ControlloreVistaPrincipale implements Initializable {
     public void clickImporta() throws IOException {
         InterfacciaRubrica ir = gestoreFile.importa();
         
+        // Se nessuna rubrica è stata importata, la rubrica rimane invariata
+        // Altrimenti, la rubrica viene sostituita con quella letta dal file
         if(ir != null)
             rubrica = ir;
         
@@ -225,6 +229,7 @@ public class ControlloreVistaPrincipale implements Initializable {
         
         tabellaContatti.setItems(contatti);
         
+        // Imposta il contenuto delle colonne
         nomeCln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getNome()); });
         cognomeCln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getCognome()); });
         
@@ -236,6 +241,7 @@ public class ControlloreVistaPrincipale implements Initializable {
         email2Cln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getEmail().get(1)); });
         email3Cln.setCellValueFactory(c -> { return new SimpleStringProperty(c.getValue().getEmail().get(2)); });
         
+        // Imposta la modifica per ogni colonna
         nomeCln.setCellFactory(TextFieldTableCell.forTableColumn());
         cognomeCln.setCellFactory(TextFieldTableCell.forTableColumn());
         
@@ -247,8 +253,10 @@ public class ControlloreVistaPrincipale implements Initializable {
         email2Cln.setCellFactory(TextFieldTableCell.forTableColumn());
         email3Cln.setCellFactory(TextFieldTableCell.forTableColumn());
         
+        // Disabilita il bottone di rimozione se nessun contatto è selezionato
         rimuoviButton.disableProperty().bind(tabellaContatti.getSelectionModel().selectedItemProperty().isNull());
         
+        // Listener per la ricerca interattiva: ad ogni cambiamento della barra di ricerca, la rubrica si aggiorna automaticamente
         cercaField.textProperty().addListener((observable, oldValue, newValue) -> {
             ricerca(newValue);
         });
