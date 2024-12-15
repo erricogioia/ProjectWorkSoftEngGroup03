@@ -180,7 +180,7 @@ public class PersonaTest {
     }
     
     /**
-     * Test per nome normale e cognome di un carattere. CE10 e CE11.
+     * Test per nome e cognome di un carattere. CE10 e CE11.
      */
     @Test
     public void testBoundaryNomeCognomeUnCarattere() {
