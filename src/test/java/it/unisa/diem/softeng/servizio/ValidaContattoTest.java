@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
  * contatto:
  * - CE1: contatto valido: almeno uno tra nome e cognome non vuoto e numeroTelefono/e-mail che soddisfano i criteri di validità
  * - CE2: contatto non valido
+ * Dati non validi: contatto nullo (null)
  *
  * Boundary Conditions:
  * - BC1: Numero di cifre del telefono superiore di uno rispetto al formato valido
@@ -160,5 +161,13 @@ public class ValidaContattoTest {
     void testNumeroTelefonoEEmailNonValidi() {
         Contatto c1 = new Contatto("Mario", "Rossi", "12345abcd0", "", "", "a@example", "", "");
         assertFalse(validatore.valida(c1));
+    }
+    
+    /**
+     * Test del metodo valida con contatto null. Dati non validi.
+     */
+    @Test
+    void testContattoNull() {
+        assertThrows(IllegalArgumentException.class, () -> { validatore.valida(null); });
     }
 }

@@ -41,7 +41,8 @@ public interface InterfacciaRubrica {
 
     /**
      * @brief Modifica un contatto esistente nella rubrica, qualora la modifica risulti valida.
-     * @param[in] contatto Il contatto già modificato.
+     * @param[in] contatto Il contatto già modificato da aggiungere in rubrica.
+     * @param[in] key La chiave del contatto precedente da sostituire.
      * @pre Il contatto non è null.
      * @post Il contatto esistente nella rubrica viene sostituito dal contatto modificato se il metodo restituisce true. 
      * @post Il contatto esistente nella rubrica rimane invariato se il metodo restituisce false. 

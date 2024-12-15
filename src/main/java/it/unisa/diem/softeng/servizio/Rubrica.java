@@ -75,6 +75,9 @@ public class Rubrica implements InterfacciaRubrica{
     */
     @Override
     public boolean modificaContatto(Contatto contatto, Persona key) {
+        if(key == null)
+            throw new IllegalArgumentException("Chiave uguale a 'null'");
+        
         boolean contattoValido = this.controlloContatto(contatto);
         
         if(this.contatti.containsKey((Persona)contatto) && this.contatti.containsValue(contatto))
